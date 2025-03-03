@@ -15,6 +15,7 @@ assert y_test.shape == (10000,)
 
 # plot_sample_images(x_test, y_test)
 
-nn = neural_network(hidden_layer_size=[128,64,32])
-x = x_train[0].reshape(784,1)
-y = nn.forward_propagation(x)
+# run_forward_backward_prop(x_train, y_train)
+
+nn = neural_network(num_layers=4,hidden_layer_size=64,eta=0.001,activation_method="tanh")
+nn.gradient_descent(x_train, y_train, batch_size=64, max_epochs=10)
