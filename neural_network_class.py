@@ -89,26 +89,6 @@ class neural_network:
             prob = np.clip(prediction[y_train[i], 0], epsilon, 1 - epsilon)
             loss += -np.log(prob)
         return loss
-    
-    # def gradient_descent_old(self, x_train, y_train, batch_size=128):
-    #     max_epochs = 1000
-    #     batch_size = batch_size
-    #     for epoch in tqdm(range(1,max_epochs+1), desc="Training Progress"): 
-    #         loss = self.loss(x_train, y_train)/x_train.shape[0]
-    #         print(f"Epoch {epoch}/{max_epochs} - Loss: {loss:.4f}")
-    #         d_theta = {f"a{i+1}": np.zeros(self.a[f"a{i+1}"].shape) for i in range(self.num_layers + 1)}
-    #         d_theta.update({f"h{i+1}": np.zeros(self.h[f"h{i+1}"].shape) for i in range(self.num_layers + 1)})
-    #         d_theta.update({f"W{i+1}": np.zeros(self.weights[f"W{i+1}"].shape) for i in range(self.num_layers + 1)})
-    #         d_theta.update({f"b{i+1}": np.zeros(self.biases[f"b{i+1}"].shape) for i in range(self.num_layers + 1)})
-    #         for i in range(x_train.shape[0]):
-    #             input = x_train[i].reshape(self.input_size,1)
-    #             output = y_train[i]
-    #             self.forward_propagation(input)
-    #             self.backward_propagation(input, output)
-    #             d_theta = {key: value + self.gradients[key] for key, value in d_theta.items()}
-    #         print(f"Gradient Norm: {np.linalg.norm(d_theta['W1'])}")
-    #         self.weights = {key: value - self.eta*d_theta[key] for key, value in self.weights.items()}
-    #         self.biases = {key: value - self.eta*d_theta[key] for key, value in self.biases.items()}
 
     def train_validation_split(self, x_train, y_train, validation_ratio):
         num_samples = x_train.shape[0]
@@ -130,7 +110,12 @@ class neural_network:
 
         return x_train_split, y_train_split, x_val, y_val
 
-    def gradient_descent(self, x_train, y_train, batch_size=128, max_epochs=50):
+    def sgd_step(self, d_theta):
+        return {key: value + self.gradients[key] for key, value in d_theta.items()}
+    
+    # def momentum_step(self, d_theta):
+
+    def gradient_descent(self, x_train, y_train, batch_size=128, max_epochs=50, optimizer="sgd"):
         max_epochs = max_epochs
         validation_ratio = 0.1
         x_train_split, y_train_split, x_val, y_val = self.train_validation_split(x_train, y_train, validation_ratio)
@@ -149,8 +134,8 @@ class neural_network:
                 y_batch = y_train_shuffled[i:i + batch_size]
 
                 # Initialize gradient changes (dw and db)
-                d_theta = {f"W{i+1}": np.zeros(self.weights[f"W{i+1}"].shape) for i in range(self.num_layers + 1)}
-                d_theta.update({f"b{i+1}": np.zeros(self.biases[f"b{i+1}"].shape) for i in range(self.num_layers + 1)})
+                d_theta = {key: np.zeros_like(value) for key, value in self.weights.items()}
+                d_theta.update({key: np.zeros_like(value) for key, value in self.biases.items()})
 
                 batch_loss = 0
 
@@ -161,7 +146,11 @@ class neural_network:
                     self.forward_propagation(input)
                     self.backward_propagation(input, output)
                     
-                    d_theta = {key: value + self.gradients[key] for key, value in d_theta.items()}
+                    if optimizer=="sgd":
+                        d_theta = self.sgd_step(d_theta)
+                    # elif optimizer=="momentum":
+                    #     d_theta = self.momentum_step(d_theta)
+                        
                     batch_loss += -np.log(self.h[f"h{self.num_layers+1}"][output, 0] + 1e-9)  # Avoid log(0)
 
                 # Average gradients over batch
@@ -182,9 +171,93 @@ class neural_network:
 
             accurate_predictions = 0
             for i in range(x_val.shape[0]):
-                y_pred = np.argmax(self.forward_propagation(x_val[i].reshape(self.input_size,1)))
+                y_pred = np.argmax(self.forward_propagation(x_val[i].reshape(self.input_size,1) / 255.0))
                 if y_pred==y_val[i]:
                     accurate_predictions += 1
 
-            print(f"Epoch {epoch}/{max_epochs} - Loss: {avg_loss:.4f}, Validation Accuracy: {(accurate_predictions*1000)/num_samples: .4f}%")
+            print(f"Epoch {epoch}/{max_epochs} - Training Loss: {avg_loss:.4f}, Validation Accuracy: {(accurate_predictions*1000)/num_samples: .4f}%")
+
+
+    def gradient_descent_general(self, x_train, y_train, batch_size=128, max_epochs=50, optimizer='adam', eta=0.001, beta1=0.9, beta2=0.999, epsilon=1e-8, gamma=0.9):
+        validation_ratio = 0.1
+        x_train_split, y_train_split, x_val, y_val = self.train_validation_split(x_train, y_train, validation_ratio)
+        num_samples = x_train_split.shape[0]
+        
+        # Initialize optimizer-specific parameters
+        momentums = {key: np.zeros_like(value) for key, value in self.weights.items()}
+        velocities = {key: np.zeros_like(value) for key, value in self.weights.items()}
+        momentums_b = {key: np.zeros_like(value) for key, value in self.biases.items()}
+        velocities_b = {key: np.zeros_like(value) for key, value in self.biases.items()}
+        
+        t = 0  # Adam and Nadam require time step
+
+        for epoch in tqdm(range(1, max_epochs + 1), desc="Training Progress"): 
+            indices = np.random.permutation(num_samples)
+            x_train_shuffled = x_train_split[indices] / 255.0
+            y_train_shuffled = y_train_split[indices]
+
+            total_loss = 0
+            
+            for i in range(0, num_samples, batch_size):
+                x_batch = x_train_shuffled[i:i + batch_size]
+                y_batch = y_train_shuffled[i:i + batch_size]
+                
+                d_theta = {key: np.zeros_like(value) for key, value in self.weights.items()}
+                d_theta.update({key: np.zeros_like(value) for key, value in self.biases.items()})
+                
+                batch_loss = 0
+                for j in range(len(x_batch)):
+                    input = x_batch[j].reshape(self.input_size, 1)
+                    output = y_batch[j]
+                    
+                    self.forward_propagation(input)
+                    self.backward_propagation(input, output)
+                    
+                    for key in d_theta:
+                        d_theta[key] += self.gradients[key]
+                        # d_theta_b[key] += self.gradients[key.replace('W', 'b')]
+                    
+                    batch_loss += -np.log(self.h[f"h{self.num_layers+1}"][output, 0] + 1e-9)  # Avoid log(0)
+                
+                # Apply optimizer
+                t += 1
+                for key in self.weights:
+                    if optimizer == 'sgd':  # Vanilla SGD
+                        self.weights[key] -= eta * d_theta[key]
+                        self.biases[key] -= eta * d_theta_b[key]
+                    elif optimizer == 'momentum':  # Momentum SGD
+                        momentums[key] = gamma * momentums[key] + eta * d_theta[key]
+                        momentums_b[key] = gamma * momentums_b[key] + eta * d_theta_b[key]
+                        self.weights[key] -= momentums[key]
+                        self.biases[key] -= momentums_b[key]
+                    elif optimizer == 'nesterov':  # NAG
+                        prev_momentum = momentums[key]
+                        momentums[key] = gamma * momentums[key] + eta * d_theta[key]
+                        self.weights[key] -= -gamma * prev_momentum + (1 + gamma) * momentums[key]
+                        self.biases[key] -= -gamma * momentums_b[key] + (1 + gamma) * momentums_b[key]
+                    elif optimizer == 'adam':  # Adam
+                        momentums[key] = beta1 * momentums[key] + (1 - beta1) * d_theta[key]
+                        velocities[key] = beta2 * velocities[key] + (1 - beta2) * (d_theta[key] ** 2)
+                        m_hat = momentums[key] / (1 - beta1 ** t)
+                        v_hat = velocities[key] / (1 - beta2 ** t)
+                        self.weights[key] -= eta * m_hat / (np.sqrt(v_hat) + epsilon)
+                        self.biases[key] -= eta * momentums_b[key] / (np.sqrt(velocities_b[key]) + epsilon)
+                    elif optimizer == 'nadam':  # Nadam
+                        m_hat = (beta1 * momentums[key] + (1 - beta1) * d_theta[key]) / (1 - beta1 ** t)
+                        v_hat = velocities[key] / (1 - beta2 ** t)
+                        self.weights[key] -= eta * (beta1 * m_hat + (1 - beta1) * d_theta[key] / (1 - beta1 ** t)) / (np.sqrt(v_hat) + epsilon)
+                        self.biases[key] -= eta * (beta1 * momentums_b[key] + (1 - beta1) * d_theta_b[key] / (1 - beta1 ** t)) / (np.sqrt(velocities_b[key]) + epsilon)
+                    
+                total_loss += batch_loss
+            
+            avg_loss = total_loss / num_samples  # Average loss across all batches
+            
+            accurate_predictions = 0
+            for i in range(x_val.shape[0]):
+                y_pred = np.argmax(self.forward_propagation(x_val[i].reshape(self.input_size, 1)))
+                if y_pred == y_val[i]:
+                    accurate_predictions += 1
+
+            print(f"Epoch {epoch}/{max_epochs} - Loss: {avg_loss:.4f}, Validation Accuracy: {(accurate_predictions * 100) / x_val.shape[0]: .4f}%")
+
 

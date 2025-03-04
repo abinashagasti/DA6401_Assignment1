@@ -17,5 +17,5 @@ assert y_test.shape == (10000,)
 
 # run_forward_backward_prop(x_train, y_train)
 
-nn = neural_network(num_layers=4,hidden_layer_size=64,eta=0.001,activation_method="tanh")
+nn = neural_network(num_layers=3,hidden_layer_size=128,eta=0.001,activation_method="relu")
 nn.gradient_descent(x_train, y_train, batch_size=64, max_epochs=10)
