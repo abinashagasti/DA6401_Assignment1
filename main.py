@@ -17,5 +17,9 @@ assert y_test.shape == (10000,)
 
 # run_forward_backward_prop(x_train, y_train)
 
-nn = neural_network(num_layers=3,hidden_layer_size=128,eta=0.001,activation_method="relu")
-nn.gradient_descent(x_train, y_train, batch_size=64, max_epochs=10)
+nn = neural_network(num_layers=3,hidden_layer_size=128,eta=1e-3,activation_method="relu")
+nn.gradient_descent(x_train, y_train, batch_size=64, max_epochs=5, optimizer="momentum")
+
+
+# nn = neural_network(num_layers=3,hidden_layer_size=128,eta=0.001,activation_method="relu") best model till now without averaging gradients
+# nn.gradient_descent(x_train, y_train, batch_size=64, max_epochs=10)
