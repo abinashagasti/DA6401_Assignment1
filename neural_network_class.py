@@ -111,36 +111,6 @@ class neural_network:
         y_val = y_train[val_indices]
 
         return x_train_split, y_train_split, x_val, y_val
-    
-    def return_gradients(self, weights, biases, x_batch, y_batch):
-        a = {key: np.zeros_like(value) for key, value in self.a.items()}
-        h = {key: np.zeros_like(value) for key, value in self.h.items()}
-        gradients = self.gradients
-        d_theta =  {key: np.zeros_like(value) for key, value in gradients.items()}
-
-        for j in range(len(x_batch)):
-            input = x_batch[j].reshape(self.input_size, 1)
-            output = y_batch[j]
-
-            a["a1"] = np.matmul(weights["W1"], input) + biases["b1"]
-            for i in range(1,self.num_layers + 1):
-                h[f"h{i}"] = self.activation(a[f"a{i}"])
-                a[f"a{i+1}"] = np.matmul(weights[f"W{i+1}"], h[f"h{i}"]) + biases[f"b{i+1}"]
-            h[f"h{self.num_layers+1}"] = self.output(a[f"a{self.num_layers+1}"])
-
-            gradients[f"a{self.num_layers+1}"] = - (self.one_hot_vector(output)-h[f"h{self.num_layers+1}"])
-            for k in range(self.num_layers+1,1,-1):
-                gradients[f"W{k}"] = np.matmul(gradients[f"a{k}"], np.transpose(h[f"h{k-1}"]))
-                gradients[f"b{k}"] = gradients[f"a{k}"]
-                gradients[f"h{k-1}"] = np.matmul(np.transpose(weights[f"W{k}"]), gradients[f"a{k}"])
-                gradients[f"a{k-1}"] = np.multiply(gradients[f"h{k-1}"], self.activation_derivative(a[f"a{k-1}"]))
-            gradients["W1"] = np.matmul(gradients[f"a{1}"], np.transpose(input))
-            gradients["b1"] = gradients["a1"]
-
-            d_theta = {key: value + gradients[key] for key, value in d_theta.items()}
-
-        return d_theta
-
 
     def gradient_descent(self, x_train, y_train, batch_size=128, max_epochs=50, optimizer="sgd"):
         max_epochs = max_epochs
@@ -152,6 +122,10 @@ class neural_network:
         momentums.update({key: np.zeros_like(value) for key, value in self.biases.items()})
         beta_momentum = 0.9
         beta_rmsprop = 0.9
+        velocities = momentums
+        beta1 = 0.9
+        beta2 = 0.999
+        t = 0
 
         for epoch in tqdm(range(1, max_epochs + 1), desc="Training Progress"): 
             # Sampling randomly
@@ -184,26 +158,11 @@ class neural_network:
                     d_theta = {key: value + self.gradients[key] for key, value in d_theta.items()}                        
                     batch_loss += -np.log(self.h[f"h{self.num_layers+1}"][output, 0] + 1e-9)  # Avoid log(0)
 
-                    if optimizer=="nag":
-                        weights_temp = self.weights
-                        biases_temp = self.biases
-                        weights = {key: value - beta_momentum * momentums[key] for key, value in self.weights.items()}
-                        biases = {key: value - beta_momentum * momentums[key] for key, value in self.biases.items()}
-                        weights_temp = self.weights
-                        biases_temp = self.biases
-                        self.weights = weights
-                        self.biases = biases
-                        self.forward_propagation(input)
-                        self.backward_propagation(input, output)
-                        gradients_at_parameter = {key: value + self.gradients[key] for key, value in gradients_at_parameter.items()}
-                        self.weights = weights_temp
-                        self.biases = biases_temp
-
-
                 # Average gradients over batch
                 # d_theta = {key: value / len(x_batch) for key, value in d_theta.items()}
 
                 # Update weights and biases
+                t += 1
                 if optimizer=="sgd":
                     self.weights = {key: value - self.eta * d_theta[key] for key, value in self.weights.items()}
                     self.biases = {key: value - self.eta * d_theta[key] for key, value in self.biases.items()}
@@ -212,16 +171,20 @@ class neural_network:
                     self.weights = {key: value - self.eta * momentums[key] for key, value in self.weights.items()}
                     self.biases = {key: value - self.eta * momentums[key] for key, value in self.biases.items()}
                 elif optimizer=="nag":
-                    # weights = {key: value - beta_momentum * momentums[key] for key, value in self.weights.items()}
-                    # biases = {key: value - beta_momentum * momentums[key] for key, value in self.biases.items()}
-                    # gradients_at_parameter = self.return_gradients(weights, biases, x_batch, y_batch)
-                    momentums = {key: beta_momentum * value + gradients_at_parameter[key] for key, value in momentums.items()}
-                    self.weights = {key: value - self.eta * momentums[key] for key, value in self.weights.items()}
-                    self.biases = {key: value - self.eta * momentums[key] for key, value in self.biases.items()}
+                    momentums = {key: beta_momentum * value + d_theta[key] for key, value in momentums.items()}
+                    self.weights = {key: value - self.eta * (beta_momentum * momentums[key] + d_theta[key]) for key, value in self.weights.items()}
+                    self.biases = {key: value - self.eta * (beta_momentum * momentums[key] + d_theta[key]) for key, value in self.biases.items()}
                 elif optimizer=="rmsprop":
                     momentums = {key: beta_rmsprop * value + (1-beta_rmsprop) * np.square(d_theta[key]) for key, value in momentums.items()}
                     self.weights = {key: value - (self.eta/ (np.sqrt(momentums[key]+1e-9))) * d_theta[key] for key, value in self.weights.items()}
                     self.biases = {key: value - (self.eta/ (np.sqrt(momentums[key]+1e-9))) * d_theta[key] for key, value in self.biases.items()}
+                elif optimizer=="adam":
+                    momentums = {key: beta1 * value + (1-beta1) * d_theta[key] for key, value in momentums.items()}
+                    velocities = {key: beta2 * value + (1-beta2) * np.square(d_theta[key]) for key, value in velocities.items()}
+                    momentums_hat = {key: value / (1-pow(beta1,t)) for key, value in momentums.items()}
+                    velocities_hat = {key: value / (1-pow(beta2,t)) for key, value in velocities.items()}
+                    self.weights = {key: value - self.eta/ (np.sqrt(velocities_hat[key])+1e-9) * momentums_hat[key] for key, value in self.weights.items()}
+                    self.biases = {key: value - self.eta/ (np.sqrt(velocities_hat[key])+1e-9) * momentums_hat[key] for key, value in self.biases.items()}
 
                 total_loss += batch_loss
 
