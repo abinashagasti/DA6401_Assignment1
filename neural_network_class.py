@@ -151,6 +151,7 @@ class neural_network:
         momentums = {key: np.zeros_like(value) for key, value in self.weights.items()}
         momentums.update({key: np.zeros_like(value) for key, value in self.biases.items()})
         beta_momentum = 0.9
+        beta_rmsprop = 0.9
 
         for epoch in tqdm(range(1, max_epochs + 1), desc="Training Progress"): 
             # Sampling randomly
@@ -217,6 +218,10 @@ class neural_network:
                     momentums = {key: beta_momentum * value + gradients_at_parameter[key] for key, value in momentums.items()}
                     self.weights = {key: value - self.eta * momentums[key] for key, value in self.weights.items()}
                     self.biases = {key: value - self.eta * momentums[key] for key, value in self.biases.items()}
+                elif optimizer=="rmsprop":
+                    momentums = {key: beta_rmsprop * value + (1-beta_rmsprop) * np.square(d_theta[key]) for key, value in momentums.items()}
+                    self.weights = {key: value - (self.eta/ (np.sqrt(momentums[key]+1e-9))) * d_theta[key] for key, value in self.weights.items()}
+                    self.biases = {key: value - (self.eta/ (np.sqrt(momentums[key]+1e-9))) * d_theta[key] for key, value in self.biases.items()}
 
                 total_loss += batch_loss
 
