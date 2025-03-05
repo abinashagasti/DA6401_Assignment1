@@ -32,6 +32,8 @@ class neural_network:
         self.gradients.update({f"W{i+1}": np.zeros(self.weights[f"W{i+1}"].shape) for i in range(self.num_layers + 1)})
         self.gradients.update({f"b{i+1}": np.zeros(self.biases[f"b{i+1}"].shape) for i in range(self.num_layers + 1)})
 
+        return self.gradients
+
     def activation(self, a):
         if self.activation_method=="sigmoid":
             threshold = 700
@@ -110,9 +112,34 @@ class neural_network:
 
         return x_train_split, y_train_split, x_val, y_val
     
-    def return_gradients(self):
-        gradients = {key: np.zeros_like(value) for key, value in self.gradients}
-        return gradients
+    def return_gradients(self, weights, biases, x_batch, y_batch):
+        a = {key: np.zeros_like(value) for key, value in self.a.items()}
+        h = {key: np.zeros_like(value) for key, value in self.h.items()}
+        gradients = self.gradients
+        d_theta =  {key: np.zeros_like(value) for key, value in gradients.items()}
+
+        for j in range(len(x_batch)):
+            input = x_batch[j].reshape(self.input_size, 1)
+            output = y_batch[j]
+
+            a["a1"] = np.matmul(weights["W1"], input) + biases["b1"]
+            for i in range(1,self.num_layers + 1):
+                h[f"h{i}"] = self.activation(a[f"a{i}"])
+                a[f"a{i+1}"] = np.matmul(weights[f"W{i+1}"], h[f"h{i}"]) + biases[f"b{i+1}"]
+            h[f"h{self.num_layers+1}"] = self.output(a[f"a{self.num_layers+1}"])
+
+            gradients[f"a{self.num_layers+1}"] = - (self.one_hot_vector(output)-h[f"h{self.num_layers+1}"])
+            for k in range(self.num_layers+1,1,-1):
+                gradients[f"W{k}"] = np.matmul(gradients[f"a{k}"], np.transpose(h[f"h{k-1}"]))
+                gradients[f"b{k}"] = gradients[f"a{k}"]
+                gradients[f"h{k-1}"] = np.matmul(np.transpose(weights[f"W{k}"]), gradients[f"a{k}"])
+                gradients[f"a{k-1}"] = np.multiply(gradients[f"h{k-1}"], self.activation_derivative(a[f"a{k-1}"]))
+            gradients["W1"] = np.matmul(gradients[f"a{1}"], np.transpose(input))
+            gradients["b1"] = gradients["a1"]
+
+            d_theta = {key: value + gradients[key] for key, value in d_theta.items()}
+
+        return d_theta
 
 
     def gradient_descent(self, x_train, y_train, batch_size=128, max_epochs=50, optimizer="sgd"):
@@ -120,6 +147,10 @@ class neural_network:
         validation_ratio = 0.1
         x_train_split, y_train_split, x_val, y_val = self.train_validation_split(x_train, y_train, validation_ratio)
         num_samples = x_train_split.shape[0]
+
+        momentums = {key: np.zeros_like(value) for key, value in self.weights.items()}
+        momentums.update({key: np.zeros_like(value) for key, value in self.biases.items()})
+        beta_momentum = 0.9
 
         for epoch in tqdm(range(1, max_epochs + 1), desc="Training Progress"): 
             # Sampling randomly
@@ -129,19 +160,17 @@ class neural_network:
 
             total_loss = 0
 
-            momentums = {key: np.zeros_like(value) for key, value in self.weights.items()}
-            momentums.update({key: np.zeros_like(value) for key, value in self.biases.items()})
-            beta_momentum = 0.9
-
             for i in range(0, num_samples, batch_size):
                 x_batch = x_train_shuffled[i:i + batch_size]/255.0
                 y_batch = y_train_shuffled[i:i + batch_size]
 
-                # Initialize gradient changes (dw and db)
+                # Initialize accumulated gradients
                 d_theta = {key: np.zeros_like(value) for key, value in self.weights.items()}
                 d_theta.update({key: np.zeros_like(value) for key, value in self.biases.items()})
 
                 batch_loss = 0
+
+                gradients_at_parameter = {key: np.zeros_like(value) for key, value in self.gradients.items()}
 
                 for j in range(len(x_batch)):
                     input = x_batch[j].reshape(self.input_size, 1)
@@ -150,9 +179,25 @@ class neural_network:
                     self.forward_propagation(input)
                     self.backward_propagation(input, output)
                     
-                    # d_theta computes the change to the weights, i.e., 
+                    # d_theta accumulates gradients across the batch
                     d_theta = {key: value + self.gradients[key] for key, value in d_theta.items()}                        
                     batch_loss += -np.log(self.h[f"h{self.num_layers+1}"][output, 0] + 1e-9)  # Avoid log(0)
+
+                    if optimizer=="nag":
+                        weights_temp = self.weights
+                        biases_temp = self.biases
+                        weights = {key: value - beta_momentum * momentums[key] for key, value in self.weights.items()}
+                        biases = {key: value - beta_momentum * momentums[key] for key, value in self.biases.items()}
+                        weights_temp = self.weights
+                        biases_temp = self.biases
+                        self.weights = weights
+                        self.biases = biases
+                        self.forward_propagation(input)
+                        self.backward_propagation(input, output)
+                        gradients_at_parameter = {key: value + self.gradients[key] for key, value in gradients_at_parameter.items()}
+                        self.weights = weights_temp
+                        self.biases = biases_temp
+
 
                 # Average gradients over batch
                 # d_theta = {key: value / len(x_batch) for key, value in d_theta.items()}
@@ -166,10 +211,13 @@ class neural_network:
                     self.weights = {key: value - self.eta * momentums[key] for key, value in self.weights.items()}
                     self.biases = {key: value - self.eta * momentums[key] for key, value in self.biases.items()}
                 elif optimizer=="nag":
-                    momentums = {key: beta_momentum * value + d_theta[key] for key, value in momentums.items()}
-                    weights = {key: value - self.eta * momentums[key] for key, value in self.weights.items()}
-                    biases = {key: value - self.eta * momentums[key] for key, value in self.biases.items()}
-                    gradients_at_parameter = self.return_gradients(weights, biases)
+                    # weights = {key: value - beta_momentum * momentums[key] for key, value in self.weights.items()}
+                    # biases = {key: value - beta_momentum * momentums[key] for key, value in self.biases.items()}
+                    # gradients_at_parameter = self.return_gradients(weights, biases, x_batch, y_batch)
+                    momentums = {key: beta_momentum * value + gradients_at_parameter[key] for key, value in momentums.items()}
+                    self.weights = {key: value - self.eta * momentums[key] for key, value in self.weights.items()}
+                    self.biases = {key: value - self.eta * momentums[key] for key, value in self.biases.items()}
+
                 total_loss += batch_loss
 
             # grad_norms_min = min(np.linalg.norm(grad, ord=np.inf) for grad in d_theta.values())
