@@ -1,0 +1,17 @@
+{"time":"2025-03-06T22:40:27.388921+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_224027-ymq4ba2e/logs/debug-core.log"}
+{"time":"2025-03-06T22:40:27.498298+05:30","level":"INFO","msg":"created new stream","id":"ymq4ba2e"}
+{"time":"2025-03-06T22:40:27.498343+05:30","level":"INFO","msg":"stream: started","id":"ymq4ba2e"}
+{"time":"2025-03-06T22:40:27.498357+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"ymq4ba2e"}
+{"time":"2025-03-06T22:40:27.498363+05:30","level":"INFO","msg":"sender: started","stream_id":"ymq4ba2e"}
+{"time":"2025-03-06T22:40:27.498405+05:30","level":"INFO","msg":"handler: started","stream_id":"ymq4ba2e"}
+{"time":"2025-03-06T22:40:32.386326+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-06T22:40:32.493484+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-06T22:40:32.49385+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-06T22:40:33.502289+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading requirements.txt","runtime_seconds":0.626452792,"progress":"2.8KB/2.8KB"},{"desc":"creating run","runtime_seconds":0.335949125}],"total_operations":2}}
+{"time":"2025-03-06T22:41:02.439632+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-03-06T22:41:05.598822+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-06T22:41:06.108165+05:30","level":"INFO","msg":"stream: closing","id":"ymq4ba2e"}
+{"time":"2025-03-06T22:41:06.108215+05:30","level":"INFO","msg":"handler: closed","stream_id":"ymq4ba2e"}
+{"time":"2025-03-06T22:41:06.108235+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"ymq4ba2e"}
+{"time":"2025-03-06T22:41:06.108262+05:30","level":"INFO","msg":"sender: closed","stream_id":"ymq4ba2e"}
+{"time":"2025-03-06T22:41:06.108442+05:30","level":"INFO","msg":"stream: closed","id":"ymq4ba2e"}

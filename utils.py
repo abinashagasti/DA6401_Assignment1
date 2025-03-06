@@ -1,13 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from neural_network_class import neural_network
+import wandb
 
 def plot_sample_images(x, y):
     indices = [np.random.choice(np.where(y == c)[0]) for c in range(10)]
-    # print(indices)
-
-    m = x.shape[0]
-
     fig, axes = plt.subplots(2, 5, figsize=(10, 5)) 
     axes = axes.ravel()
 
@@ -17,7 +14,8 @@ def plot_sample_images(x, y):
         axes[i].axis("off")  # Hide axes
 
     plt.tight_layout()
-    plt.show()
+    wandb.log({"Sample Images": wandb.Image(fig)})
+    plt.close(fig)
 
 def check_forward_prop(nn, x, y):
     y_check = nn.output(nn.weights["W4"]@nn.activation(nn.weights["W3"]@nn.activation(nn.weights["W2"]@nn.activation(nn.weights["W1"]@x \

@@ -1,0 +1,15 @@
+{"time":"2025-03-06T22:01:08.930194+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_220108-tnexw5xt/logs/debug-core.log"}
+{"time":"2025-03-06T22:01:09.042543+05:30","level":"INFO","msg":"created new stream","id":"tnexw5xt"}
+{"time":"2025-03-06T22:01:09.042622+05:30","level":"INFO","msg":"stream: started","id":"tnexw5xt"}
+{"time":"2025-03-06T22:01:09.0428+05:30","level":"INFO","msg":"handler: started","stream_id":"tnexw5xt"}
+{"time":"2025-03-06T22:01:09.042798+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"tnexw5xt"}
+{"time":"2025-03-06T22:01:09.042971+05:30","level":"INFO","msg":"sender: started","stream_id":"tnexw5xt"}
+{"time":"2025-03-06T22:01:09.484392+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-06T22:07:15.260107+05:30","level":"INFO","msg":"stream: closing","id":"tnexw5xt"}
+{"time":"2025-03-06T22:07:15.260337+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-06T22:07:15.261503+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-06T22:07:16.958436+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-06T22:07:17.684558+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"tnexw5xt"}
+{"time":"2025-03-06T22:07:17.684699+05:30","level":"INFO","msg":"sender: closed","stream_id":"tnexw5xt"}
+{"time":"2025-03-06T22:07:17.684845+05:30","level":"INFO","msg":"handler: closed","stream_id":"tnexw5xt"}
+{"time":"2025-03-06T22:07:17.685032+05:30","level":"INFO","msg":"stream: closed","id":"tnexw5xt"}

@@ -1,0 +1,16 @@
+{"time":"2025-03-06T23:08:25.830902+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_230825-agpi9uci/logs/debug-core.log"}
+{"time":"2025-03-06T23:08:25.941697+05:30","level":"INFO","msg":"created new stream","id":"agpi9uci"}
+{"time":"2025-03-06T23:08:25.941751+05:30","level":"INFO","msg":"stream: started","id":"agpi9uci"}
+{"time":"2025-03-06T23:08:25.942004+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"agpi9uci"}
+{"time":"2025-03-06T23:08:25.942029+05:30","level":"INFO","msg":"handler: started","stream_id":"agpi9uci"}
+{"time":"2025-03-06T23:08:25.942148+05:30","level":"INFO","msg":"sender: started","stream_id":"agpi9uci"}
+{"time":"2025-03-06T23:08:26.412645+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-06T23:08:26.51434+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-06T23:08:26.515076+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-06T23:08:27.5241+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-metadata.json","runtime_seconds":0.6052205,"progress":"662B/662B"},{"desc":"uploading requirements.txt","runtime_seconds":0.424735042,"progress":"2.8KB/2.8KB"},{"desc":"creating run","runtime_seconds":0.245058459}],"total_operations":3}}
+{"time":"2025-03-06T23:08:28.817923+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-06T23:08:29.234993+05:30","level":"INFO","msg":"stream: closing","id":"agpi9uci"}
+{"time":"2025-03-06T23:08:29.235019+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"agpi9uci"}
+{"time":"2025-03-06T23:08:29.235072+05:30","level":"INFO","msg":"sender: closed","stream_id":"agpi9uci"}
+{"time":"2025-03-06T23:08:29.235611+05:30","level":"INFO","msg":"handler: closed","stream_id":"agpi9uci"}
+{"time":"2025-03-06T23:08:29.235629+05:30","level":"INFO","msg":"stream: closed","id":"agpi9uci"}

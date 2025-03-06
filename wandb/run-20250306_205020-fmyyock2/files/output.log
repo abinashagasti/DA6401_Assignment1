@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/main.py", line 16, in <module>
+    x_train, y_train, x_test, y_test = fashion_mnist.load_data()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 4, got 2)

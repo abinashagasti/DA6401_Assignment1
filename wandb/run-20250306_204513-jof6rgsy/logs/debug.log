@@ -1,0 +1,25 @@
+2025-03-06 20:45:13,037 INFO    MainThread:22885 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-03-06 20:45:13,038 INFO    MainThread:22885 [wandb_setup.py:_flush():67] Configure stats pid to 22885
+2025-03-06 20:45:13,038 INFO    MainThread:22885 [wandb_setup.py:_flush():67] Loading settings from /Users/abinashagasti/.config/wandb/settings
+2025-03-06 20:45:13,038 INFO    MainThread:22885 [wandb_setup.py:_flush():67] Loading settings from /Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/settings
+2025-03-06 20:45:13,038 INFO    MainThread:22885 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-06 20:45:13,038 INFO    MainThread:22885 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_204513-jof6rgsy/logs/debug.log
+2025-03-06 20:45:13,038 INFO    MainThread:22885 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_204513-jof6rgsy/logs/debug-internal.log
+2025-03-06 20:45:13,038 INFO    MainThread:22885 [wandb_init.py:init():761] calling init triggers
+2025-03-06 20:45:13,038 INFO    MainThread:22885 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-03-06 20:45:13,038 INFO    MainThread:22885 [wandb_init.py:init():784] starting backend
+2025-03-06 20:45:13,038 INFO    MainThread:22885 [wandb_init.py:init():788] sending inform_init request
+2025-03-06 20:45:13,065 INFO    MainThread:22885 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2025-03-06 20:45:13,065 INFO    MainThread:22885 [wandb_init.py:init():798] backend started and connected
+2025-03-06 20:45:13,069 INFO    MainThread:22885 [wandb_init.py:init():891] updated telemetry
+2025-03-06 20:45:13,094 INFO    MainThread:22885 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-03-06 20:45:13,488 ERROR   MainThread:22885 [wandb_init.py:init():1478] error in wandb.init()
+Traceback (most recent call last):
+  File "/Users/abinashagasti/miniconda3/envs/da6401/lib/python3.12/site-packages/wandb/sdk/wandb_init.py", line 1468, in init
+    return wi.init(run_settings, run_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/abinashagasti/miniconda3/envs/da6401/lib/python3.12/site-packages/wandb/sdk/wandb_init.py", line 963, in init
+    raise error
+wandb.errors.errors.CommError: failed to upsert bucket: returned error 403: {"data":{"upsertBucket":null},"errors":[{"message":"permission denied","path":["upsertBucket"],"extensions":{"code":"PERMISSION_ERROR"}}]}
+2025-03-06 20:45:14,489 INFO    MsgRouterThr:22885 [mailbox.py:close():129] Closing mailbox, abandoning 0 handles.

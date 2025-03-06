@@ -1,0 +1,17 @@
+{"time":"2025-03-06T20:45:13.070738+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_204513-jof6rgsy/logs/debug-core.log"}
+{"time":"2025-03-06T20:45:13.183912+05:30","level":"INFO","msg":"created new stream","id":"jof6rgsy"}
+{"time":"2025-03-06T20:45:13.183982+05:30","level":"INFO","msg":"stream: started","id":"jof6rgsy"}
+{"time":"2025-03-06T20:45:13.184169+05:30","level":"INFO","msg":"sender: started","stream_id":"jof6rgsy"}
+{"time":"2025-03-06T20:45:13.184178+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"jof6rgsy"}
+{"time":"2025-03-06T20:45:13.184191+05:30","level":"INFO","msg":"handler: started","stream_id":"jof6rgsy"}
+{"time":"2025-03-06T20:45:13.486751+05:30","level":"ERROR","msg":"HTTP error","status":403,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-03-06T20:45:13.487404+05:30","level":"ERROR","msg":"sender: upsertRun:","error":"failed to upsert bucket: returned error 403: {\"data\":{\"upsertBucket\":null},\"errors\":[{\"message\":\"permission denied\",\"path\":[\"upsertBucket\"],\"extensions\":{\"code\":\"PERMISSION_ERROR\"}}]}"}
+{"time":"2025-03-06T20:45:14.490289+05:30","level":"INFO","msg":"stream: closing","id":"jof6rgsy"}
+{"time":"2025-03-06T20:45:14.49058+05:30","level":"ERROR","msg":"sender: upsertConfig: RunRecord is nil"}
+{"time":"2025-03-06T20:45:14.899131+05:30","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-03-06T20:45:14.899529+05:30","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: returned error 404: {\"data\":{\"createRunFiles\":null},\"errors\":[{\"message\":\"project ee20d201/DA6401_Assignment_1 not found during createRunFiles\",\"path\":[\"createRunFiles\"]}]}"}
+{"time":"2025-03-06T20:45:14.900525+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-06T20:45:14.900618+05:30","level":"INFO","msg":"sender: closed","stream_id":"jof6rgsy"}
+{"time":"2025-03-06T20:45:14.900612+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"jof6rgsy"}
+{"time":"2025-03-06T20:45:14.900734+05:30","level":"INFO","msg":"handler: closed","stream_id":"jof6rgsy"}
+{"time":"2025-03-06T20:45:14.900753+05:30","level":"INFO","msg":"stream: closed","id":"jof6rgsy"}

@@ -1,0 +1,15 @@
+{"time":"2025-03-06T20:50:20.323644+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_205020-fmyyock2/logs/debug-core.log"}
+{"time":"2025-03-06T20:50:20.434363+05:30","level":"INFO","msg":"created new stream","id":"fmyyock2"}
+{"time":"2025-03-06T20:50:20.434422+05:30","level":"INFO","msg":"stream: started","id":"fmyyock2"}
+{"time":"2025-03-06T20:50:20.434591+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"fmyyock2"}
+{"time":"2025-03-06T20:50:20.434625+05:30","level":"INFO","msg":"handler: started","stream_id":"fmyyock2"}
+{"time":"2025-03-06T20:50:20.434737+05:30","level":"INFO","msg":"sender: started","stream_id":"fmyyock2"}
+{"time":"2025-03-06T20:50:20.941134+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-06T20:50:21.767866+05:30","level":"INFO","msg":"stream: closing","id":"fmyyock2"}
+{"time":"2025-03-06T20:50:21.768419+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-06T20:50:21.769998+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-06T20:50:23.026864+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-06T20:50:23.436087+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"fmyyock2"}
+{"time":"2025-03-06T20:50:23.4361+05:30","level":"INFO","msg":"sender: closed","stream_id":"fmyyock2"}
+{"time":"2025-03-06T20:50:23.436308+05:30","level":"INFO","msg":"handler: closed","stream_id":"fmyyock2"}
+{"time":"2025-03-06T20:50:23.436324+05:30","level":"INFO","msg":"stream: closed","id":"fmyyock2"}

@@ -1,0 +1,16 @@
+{
+  "os": "macOS-15.3-arm64-arm-64bit",
+  "python": "CPython 3.12.9",
+  "startedAt": "2025-03-06T17:11:17.977543Z",
+  "program": "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/sweep_train.py",
+  "codePath": "sweep_train.py",
+  "git": {
+    "remote": "https://github.com/abinashagasti/DA6401_Assignment1.git",
+    "commit": "ac3911f1f7b027df9f12d5056ee9b115fe289dd0"
+  },
+  "email": "ee20d201@smail.iitm.ac.in",
+  "root": "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1",
+  "host": "Abinashs-Laptop.local",
+  "executable": "/Users/abinashagasti/miniconda3/envs/da6401/bin/python",
+  "codePathLocal": "sweep_train.py"
+}

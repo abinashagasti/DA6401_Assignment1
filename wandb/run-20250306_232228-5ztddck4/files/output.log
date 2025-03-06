@@ -1,0 +1,8 @@
+Training Progress: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:27<00:00,  5.54s/it]
+Epoch 1/5 - Training Loss: 1.0716, Training Accuracy: 62.78%, Validation Loss: 1.2275, Validation Accuracy:  64.6833%
+Storing current model parameters (epoch 1) ...
+Epoch 2/5 - Training Loss: 1.0985, Training Accuracy: 66.2037%, Validation Loss: 1.2718, Validation Accuracy:  66.7167%
+Epoch 3/5 - Training Loss: 1.1812, Training Accuracy: 64.4833%, Validation Loss: 1.4442, Validation Accuracy:  63.8167%
+Epoch 4/5 - Training Loss: 1.2042, Training Accuracy: 64.35%, Validation Loss: 1.0441, Validation Accuracy:  69.5167%
+Storing current model parameters (epoch 4) ...
+Epoch 5/5 - Training Loss: 1.2509, Training Accuracy: 62.9407%, Validation Loss: 1.4489, Validation Accuracy:  51.7167%

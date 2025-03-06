@@ -1,0 +1,17 @@
+{"time":"2025-03-06T22:41:17.981004+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_224117-xmwlwiwg/logs/debug-core.log"}
+{"time":"2025-03-06T22:41:18.096302+05:30","level":"INFO","msg":"created new stream","id":"xmwlwiwg"}
+{"time":"2025-03-06T22:41:18.096373+05:30","level":"INFO","msg":"stream: started","id":"xmwlwiwg"}
+{"time":"2025-03-06T22:41:18.096374+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"xmwlwiwg"}
+{"time":"2025-03-06T22:41:18.096369+05:30","level":"INFO","msg":"handler: started","stream_id":"xmwlwiwg"}
+{"time":"2025-03-06T22:41:18.096434+05:30","level":"INFO","msg":"sender: started","stream_id":"xmwlwiwg"}
+{"time":"2025-03-06T22:41:18.481992+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-06T22:41:18.649949+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-06T22:41:18.655208+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-06T22:41:19.66242+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading data","runtime_seconds":0.40524125},{"desc":"creating run","runtime_seconds":0.404977917}],"total_operations":2}}
+{"time":"2025-03-06T22:41:21.134766+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-06T22:41:21.504313+05:30","level":"INFO","msg":"stream: closing","id":"xmwlwiwg"}
+{"time":"2025-03-06T22:41:21.504355+05:30","level":"INFO","msg":"handler: closed","stream_id":"xmwlwiwg"}
+{"time":"2025-03-06T22:41:21.504364+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"xmwlwiwg"}
+{"time":"2025-03-06T22:41:21.504557+05:30","level":"WARN","msg":"sender: received Exit record more than once, ignoring"}
+{"time":"2025-03-06T22:41:21.504567+05:30","level":"INFO","msg":"sender: closed","stream_id":"xmwlwiwg"}
+{"time":"2025-03-06T22:41:21.504583+05:30","level":"INFO","msg":"stream: closed","id":"xmwlwiwg"}

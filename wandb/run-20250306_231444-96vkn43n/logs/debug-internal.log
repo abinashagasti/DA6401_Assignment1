@@ -1,0 +1,16 @@
+{"time":"2025-03-06T23:14:44.782052+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_231444-96vkn43n/logs/debug-core.log"}
+{"time":"2025-03-06T23:14:44.894726+05:30","level":"INFO","msg":"created new stream","id":"96vkn43n"}
+{"time":"2025-03-06T23:14:44.894935+05:30","level":"INFO","msg":"stream: started","id":"96vkn43n"}
+{"time":"2025-03-06T23:14:44.8951+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"96vkn43n"}
+{"time":"2025-03-06T23:14:44.895123+05:30","level":"INFO","msg":"handler: started","stream_id":"96vkn43n"}
+{"time":"2025-03-06T23:14:44.895207+05:30","level":"INFO","msg":"sender: started","stream_id":"96vkn43n"}
+{"time":"2025-03-06T23:14:45.240357+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-06T23:14:45.342245+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-06T23:14:45.34284+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-06T23:14:46.350934+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading requirements.txt","runtime_seconds":0.707332333,"progress":"2.8KB/2.8KB"},{"desc":"uploading data","runtime_seconds":0.28838375},{"desc":"updating run config","runtime_seconds":0.010684667}],"total_operations":3}}
+{"time":"2025-03-06T23:14:47.528315+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-06T23:14:47.913072+05:30","level":"INFO","msg":"stream: closing","id":"96vkn43n"}
+{"time":"2025-03-06T23:14:47.913137+05:30","level":"INFO","msg":"handler: closed","stream_id":"96vkn43n"}
+{"time":"2025-03-06T23:14:47.913143+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"96vkn43n"}
+{"time":"2025-03-06T23:14:47.913169+05:30","level":"INFO","msg":"sender: closed","stream_id":"96vkn43n"}
+{"time":"2025-03-06T23:14:47.91331+05:30","level":"INFO","msg":"stream: closed","id":"96vkn43n"}

@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.special import expit as sigmoid
 from tqdm import tqdm
+import wandb
 
 class neural_network:
     def __init__(self, input_size=784, num_layers=3, output_size=10, hidden_layer_size=64, eta=0.001, activation_method="sigmoid", weight_initialization_method="random", loss="cross_entropy"):
@@ -159,7 +160,7 @@ class neural_network:
             self.biases = {key: value - (self.eta/ (np.sqrt(velocities_hat[key])+1e-9)) * (beta1*momentums_hat[key] + \
                                                                                             ((1-beta1)/(1-pow(beta1,t)))*d_theta[key]) for key, value in self.biases.items()}
 
-    def gradient_descent(self, x_train, y_train, batch_size=128, max_epochs=50, optimizer="adam", weight_decay=0, patience=3, learning_rate_annealing=False):
+    def gradient_descent(self, x_train, y_train, batch_size=128, max_epochs=50, optimizer="adam", weight_decay=0, patience=3, learning_rate_annealing=False, wandb_log=False):
         max_epochs = max_epochs
         validation_ratio = 0.1
         x_train_split, y_train_split, x_val, y_val = self.train_validation_split(x_train, y_train, validation_ratio)
@@ -243,9 +244,21 @@ class neural_network:
                     accurate_predictions += 1
 
             validation_loss /= x_val.shape[0]
+            training_accuracy = (accurate_predictions_training / num_samples) * 100
+            validation_accuracy = (accurate_predictions / x_val.shape[0]) * 100
+
+            if wandb_log:
+                wandb.log({
+                    "epoch": epoch,
+                    "training_loss": avg_training_loss,
+                    "training_accuracy": training_accuracy,
+                    "validation_loss": validation_loss,
+                    "validation_accuracy": validation_accuracy
+                })
 
             if validation_loss > best_validation_loss:
                 patience_counter += 1
+                print(f"Epoch {epoch}/{max_epochs} - Training Loss: {avg_training_loss:.4f}, Training Accuracy: {training_accuracy:.4f}%, Validation Loss: {validation_loss:.4f}, Validation Accuracy: {validation_accuracy: .4f}%")
                 if patience_counter >= patience:
                     if learning_rate_annealing == False:
                         print("Early stopping activated")
@@ -255,7 +268,6 @@ class neural_network:
                         self.weights = np.load("best_weights.npy", allow_pickle=True).item()
                         self.biases = np.load("best_biases.npy", allow_pickle=True).item()
                         self.eta /= 2
-                    print(f"Epoch {epoch}/{max_epochs} - Training Loss: {avg_training_loss:.4f}, Training Accuracy: {(accurate_predictions_training / num_samples) * 100:.4}%, Validation Loss: {validation_loss:.4f}, Validation Accuracy: {(accurate_predictions*100)/x_val.shape[0]: .4f}%")
                     
             else:
                 best_validation_loss = validation_loss

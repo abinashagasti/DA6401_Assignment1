@@ -1,0 +1,11 @@
+Training Progress:   0%|                                                                                                                                                             | 0/15 [00:00<?, ?it/s]/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/neural_network_class.py:143: RuntimeWarning: overflow encountered in square
+  momentums = {key: beta_rmsprop * value + (1-beta_rmsprop) * np.square(d_theta[key]) for key, value in momentums.items()}
+/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/neural_network_class.py:79: RuntimeWarning: overflow encountered in matmul
+  self.a[f"a{i+1}"] = np.matmul(self.weights[f"W{i+1}"], self.h[f"h{i}"]) + self.biases[f"b{i+1}"]
+/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/neural_network_class.py:71: RuntimeWarning: invalid value encountered in subtract
+  exp_shifted = np.exp(a - np.max(a))  # Prevent overflow
+Epoch 1/15 - Training Loss: nan, Training Accuracy: 9.406%, Validation Loss: nan, Validation Accuracy:  9.8500%
+Storing current model parameters (epoch 1) ...
+Training Progress:  13%|███████████████████▋                                                                                                                                | 2/15 [04:05<26:24, 121.92s/it][34m[1mwandb[0m: Ctrl + C detected. Stopping sweep.
+Epoch 2/15 - Training Loss: nan, Training Accuracy: 10.02%, Validation Loss: nan, Validation Accuracy:  9.8500%
+Storing current model parameters (epoch 2) ...

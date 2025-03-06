@@ -1,0 +1,16 @@
+{"time":"2025-03-06T23:23:11.303695+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_232311-tvp4lzvp/logs/debug-core.log"}
+{"time":"2025-03-06T23:23:11.417362+05:30","level":"INFO","msg":"created new stream","id":"tvp4lzvp"}
+{"time":"2025-03-06T23:23:11.417412+05:30","level":"INFO","msg":"stream: started","id":"tvp4lzvp"}
+{"time":"2025-03-06T23:23:11.41744+05:30","level":"INFO","msg":"handler: started","stream_id":"tvp4lzvp"}
+{"time":"2025-03-06T23:23:11.41744+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"tvp4lzvp"}
+{"time":"2025-03-06T23:23:11.417524+05:30","level":"INFO","msg":"sender: started","stream_id":"tvp4lzvp"}
+{"time":"2025-03-06T23:23:11.799177+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-06T23:23:42.433125+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-06T23:23:42.433775+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-06T23:23:43.450348+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.267747958,"progress":"1.2KB/1.2KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.26771625,"progress":"251B/251B"}],"total_operations":2}}
+{"time":"2025-03-06T23:23:43.898989+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-06T23:23:44.362275+05:30","level":"INFO","msg":"stream: closing","id":"tvp4lzvp"}
+{"time":"2025-03-06T23:23:44.362356+05:30","level":"INFO","msg":"handler: closed","stream_id":"tvp4lzvp"}
+{"time":"2025-03-06T23:23:44.362388+05:30","level":"INFO","msg":"sender: closed","stream_id":"tvp4lzvp"}
+{"time":"2025-03-06T23:23:44.362368+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"tvp4lzvp"}
+{"time":"2025-03-06T23:23:44.362794+05:30","level":"INFO","msg":"stream: closed","id":"tvp4lzvp"}

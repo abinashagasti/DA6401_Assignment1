@@ -1,0 +1,10 @@
+{"time":"2025-03-06T23:14:57.024458+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_231457-zxl5791p/logs/debug-core.log"}
+{"time":"2025-03-06T23:14:57.139691+05:30","level":"INFO","msg":"created new stream","id":"zxl5791p"}
+{"time":"2025-03-06T23:14:57.139746+05:30","level":"INFO","msg":"handler: started","stream_id":"zxl5791p"}
+{"time":"2025-03-06T23:14:57.139776+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"zxl5791p"}
+{"time":"2025-03-06T23:14:57.139765+05:30","level":"INFO","msg":"stream: started","id":"zxl5791p"}
+{"time":"2025-03-06T23:14:57.13978+05:30","level":"INFO","msg":"sender: started","stream_id":"zxl5791p"}
+{"time":"2025-03-06T23:14:57.528889+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-06T23:15:15.971459+05:30","level":"INFO","msg":"stream: closing","id":"zxl5791p"}
+{"time":"2025-03-06T23:15:15.971654+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-06T23:15:15.974802+05:30","level":"INFO","msg":"Stopped system monitor"}

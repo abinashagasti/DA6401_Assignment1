@@ -1,0 +1,20 @@
+wandb_version: 1
+
+activation:
+  value: sigmmoid
+batch_size:
+  value: 64
+epochs:
+  value: 25
+eta:
+  value: 0.0054707587236537845
+hidden_size:
+  value: 64
+num_layers:
+  value: 3
+optimizer:
+  value: rmsprop
+weight_decay:
+  value: 0
+weight_init:
+  value: random

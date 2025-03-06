@@ -1,0 +1,65 @@
+2025-03-06 22:41:17,973 INFO    Thread-13 (_run_job):24405 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-03-06 22:41:17,974 INFO    Thread-13 (_run_job):24405 [wandb_setup.py:_flush():67] Configure stats pid to 24405
+2025-03-06 22:41:17,974 INFO    Thread-13 (_run_job):24405 [wandb_setup.py:_flush():67] Loading settings from /Users/abinashagasti/.config/wandb/settings
+2025-03-06 22:41:17,974 INFO    Thread-13 (_run_job):24405 [wandb_setup.py:_flush():67] Loading settings from /Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/settings
+2025-03-06 22:41:17,974 INFO    Thread-13 (_run_job):24405 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-06 22:41:17,974 INFO    Thread-13 (_run_job):24405 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_224117-xmwlwiwg/logs/debug.log
+2025-03-06 22:41:17,974 INFO    Thread-13 (_run_job):24405 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_224117-xmwlwiwg/logs/debug-internal.log
+2025-03-06 22:41:17,974 INFO    Thread-13 (_run_job):24405 [wandb_init.py:init():761] calling init triggers
+2025-03-06 22:41:17,974 INFO    Thread-13 (_run_job):24405 [wandb_init.py:init():766] wandb.init called with sweep_config: {'activation': 'sigmmoid', 'batch_size': 64, 'epochs': 25, 'eta': 0.0054707587236537845, 'hidden_size': 64, 'num_layers': 3, 'optimizer': 'rmsprop', 'weight_decay': 0, 'weight_init': 'random'}
+config: {'_wandb': {}}
+2025-03-06 22:41:17,974 INFO    Thread-13 (_run_job):24405 [wandb_init.py:init():784] starting backend
+2025-03-06 22:41:17,974 INFO    Thread-13 (_run_job):24405 [wandb_init.py:init():788] sending inform_init request
+2025-03-06 22:41:17,977 INFO    Thread-13 (_run_job):24405 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2025-03-06 22:41:17,977 INFO    Thread-13 (_run_job):24405 [wandb_init.py:init():798] backend started and connected
+2025-03-06 22:41:17,978 INFO    Thread-13 (_run_job):24405 [wandb_run.py:_config_callback():1261] config_cb None None {'activation': 'sigmmoid', 'batch_size': 64, 'epochs': 25, 'eta': 0.0054707587236537845, 'hidden_size': 64, 'num_layers': 3, 'optimizer': 'rmsprop', 'weight_decay': 0, 'weight_init': 'random'}
+2025-03-06 22:41:17,991 INFO    Thread-13 (_run_job):24405 [wandb_init.py:init():891] updated telemetry
+2025-03-06 22:41:18,018 INFO    Thread-13 (_run_job):24405 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-03-06 22:41:18,480 INFO    Thread-13 (_run_job):24405 [wandb_init.py:init():990] starting run threads in backend
+2025-03-06 22:41:18,595 INFO    Thread-13 (_run_job):24405 [wandb_run.py:_console_start():2375] atexit reg
+2025-03-06 22:41:18,595 INFO    Thread-13 (_run_job):24405 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-03-06 22:41:18,595 INFO    Thread-13 (_run_job):24405 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-03-06 22:41:18,595 INFO    Thread-13 (_run_job):24405 [wandb_run.py:_redirect():2315] Redirects installed.
+2025-03-06 22:41:18,596 INFO    Thread-13 (_run_job):24405 [wandb_init.py:init():1032] run started, returning control to user process
+2025-03-06 22:41:18,649 INFO    Thread-13 (_run_job):24405 [wandb_run.py:_finish():2112] finishing run ee20d201-indian-institute-of-technology-madras/neural-network-sweep/xmwlwiwg
+2025-03-06 22:41:18,649 INFO    Thread-13 (_run_job):24405 [wandb_run.py:_atexit_cleanup():2340] got exitcode: 1
+2025-03-06 22:41:18,649 INFO    Thread-13 (_run_job):24405 [wandb_run.py:_restore():2322] restore
+2025-03-06 22:41:18,649 INFO    Thread-13 (_run_job):24405 [wandb_run.py:_restore():2328] restore done
+2025-03-06 22:41:21,502 INFO    MsgRouterThr:24405 [mailbox.py:close():129] Closing mailbox, abandoning 1 handles.
+2025-03-06 22:41:21,503 INFO    Thread-13 (_run_job):24405 [wandb_run.py:_restore():2322] restore
+2025-03-06 22:41:21,503 INFO    Thread-13 (_run_job):24405 [wandb_run.py:_restore():2328] restore done
+2025-03-06 22:41:21,503 ERROR   Thread-13 (_run_job):24405 [wandb_run.py:_atexit_cleanup():2361] Problem finishing run
+Traceback (most recent call last):
+  File "/Users/abinashagasti/miniconda3/envs/da6401/lib/python3.12/site-packages/wandb/agents/pyagent.py", line 306, in _run_job
+    self._function()
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/sweep_train.py", line 25, in train
+    nn.gradient_descent(x_train, y_train, batch_size=config.batch_size, max_epochs=config.epochs, optimizer=config.optimizer, \
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/neural_network_class.py", line 204, in gradient_descent
+    self.forward_propagation(input)
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/neural_network_class.py", line 78, in forward_propagation
+    self.h[f"h{i}"] = self.activation(self.a[f"a{i}"])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/neural_network_class.py", line 58, in activation
+    raise Exception("Incorrect activation function input!")
+Exception: Incorrect activation function input!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abinashagasti/miniconda3/envs/da6401/lib/python3.12/site-packages/wandb/sdk/wandb_run.py", line 2352, in _atexit_cleanup
+    self._on_finish()
+  File "/Users/abinashagasti/miniconda3/envs/da6401/lib/python3.12/site-packages/wandb/sdk/wandb_run.py", line 2628, in _on_finish
+    internal_messages_handle = self._backend.interface.deliver_internal_messages()
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/abinashagasti/miniconda3/envs/da6401/lib/python3.12/site-packages/wandb/sdk/interface/interface.py", line 963, in deliver_internal_messages
+    return self._deliver_internal_messages(internal_message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/abinashagasti/miniconda3/envs/da6401/lib/python3.12/site-packages/wandb/sdk/interface/interface_shared.py", line 479, in _deliver_internal_messages
+    return self._deliver_record(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/abinashagasti/miniconda3/envs/da6401/lib/python3.12/site-packages/wandb/sdk/interface/interface_shared.py", line 389, in _deliver_record
+    handle = mailbox.require_response(record)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/abinashagasti/miniconda3/envs/da6401/lib/python3.12/site-packages/wandb/sdk/mailbox/mailbox.py", line 68, in require_response
+    raise MailboxClosedError()
+wandb.sdk.mailbox.mailbox.MailboxClosedError
