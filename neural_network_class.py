@@ -122,7 +122,7 @@ class neural_network:
 
         return x_train_split, y_train_split, x_val, y_val
 
-    def gradient_descent(self, x_train, y_train, batch_size=128, max_epochs=50, optimizer="sgd", weight_decay=0):
+    def gradient_descent(self, x_train, y_train, batch_size=128, max_epochs=50, optimizer="adam", weight_decay=0, patience=2):
         max_epochs = max_epochs
         validation_ratio = 0.1
         x_train_split, y_train_split, x_val, y_val = self.train_validation_split(x_train, y_train, validation_ratio)
@@ -137,6 +137,9 @@ class neural_network:
         beta2 = 0.999
         t = 0
 
+        best_validation_loss = np.inf
+        patience_counter = 0
+
         for epoch in tqdm(range(1, max_epochs + 1), desc="Training Progress"): 
             # Sampling randomly
             indices = np.random.permutation(num_samples)
@@ -144,6 +147,7 @@ class neural_network:
             y_train_shuffled = y_train_split[indices]
 
             total_loss = 0
+            accurate_predictions_training = 0
 
             for i in range(0, num_samples, batch_size):
                 x_batch = x_train_shuffled[i:i + batch_size]/255.0
@@ -155,14 +159,16 @@ class neural_network:
 
                 batch_loss = 0
 
-                gradients_at_parameter = {key: np.zeros_like(value) for key, value in self.gradients.items()}
-
                 for j in range(len(x_batch)):
                     input = x_batch[j].reshape(self.input_size, 1)
                     output = y_batch[j]
                     
                     self.forward_propagation(input)
                     self.backward_propagation(input, output)
+
+                    y_pred = np.argmax(self.h[f"h{self.num_layers+1}"])
+                    if y_pred == output:
+                        accurate_predictions_training += 1
                     
                     # d_theta accumulates gradients across the batch
                     d_theta = {key: value + self.gradients[key] for key, value in d_theta.items()}                        
@@ -210,12 +216,24 @@ class neural_network:
             # print(f"Minimum of max norm of each gradient: {grad_norms_min}")
             # print(f"Maximum of max norm of each gradient: {grad_norms_max}")
 
-            avg_loss = total_loss / num_samples  # Average loss across all batches
+            avg_training_loss = total_loss / num_samples  # Average loss across all batches
 
             accurate_predictions = 0
+            validation_loss = 0
             for i in range(x_val.shape[0]):
                 y_pred = np.argmax(self.forward_propagation(x_val[i].reshape(self.input_size,1) / 255.0))
+                validation_loss += -np.log(self.h[f"h{self.num_layers+1}"][output, 0] + 1e-9)
                 if y_pred==y_val[i]:
                     accurate_predictions += 1
+            validation_loss /= x_val.shape[0]
+            if validation_loss > best_validation_loss:
+                patience_counter += 1
+                if patience_counter >= patience:
+                    print("Early stopping activated")
+                    print(f"Epoch {epoch}/{max_epochs} - Training Loss: {avg_training_loss:.4f}, Training Accuracy: {(accurate_predictions_training / num_samples) * 100:.4}%, Validation Loss: {validation_loss:.4f}, Validation Accuracy: {(accurate_predictions*100)/x_val.shape[0]: .4f}%")
+                    break
+            else:
+                best_validation_loss = validation_loss
+                patience_counter = 0
 
-            print(f"Epoch {epoch}/{max_epochs} - Training Loss: {avg_loss:.4f}, Validation Accuracy: {(accurate_predictions*1000)/num_samples: .4f}%")
+            print(f"Epoch {epoch}/{max_epochs} - Training Loss: {avg_training_loss:.4f}, Training Accuracy: {(accurate_predictions_training / num_samples) * 100:.4}%, Validation Loss: {validation_loss:.4f}, Validation Accuracy: {(accurate_predictions*100)/x_val.shape[0]: .4f}%")
