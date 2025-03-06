@@ -159,7 +159,7 @@ class neural_network:
             self.biases = {key: value - (self.eta/ (np.sqrt(velocities_hat[key])+1e-9)) * (beta1*momentums_hat[key] + \
                                                                                             ((1-beta1)/(1-pow(beta1,t)))*d_theta[key]) for key, value in self.biases.items()}
 
-    def gradient_descent(self, x_train, y_train, batch_size=128, max_epochs=50, optimizer="adam", weight_decay=0, patience=2):
+    def gradient_descent(self, x_train, y_train, batch_size=128, max_epochs=50, optimizer="adam", weight_decay=0, patience=3, learning_rate_annealing=False):
         max_epochs = max_epochs
         validation_ratio = 0.1
         x_train_split, y_train_split, x_val, y_val = self.train_validation_split(x_train, y_train, validation_ratio)
@@ -247,11 +247,24 @@ class neural_network:
             if validation_loss > best_validation_loss:
                 patience_counter += 1
                 if patience_counter >= patience:
-                    print("Early stopping activated")
+                    if learning_rate_annealing == False:
+                        print("Early stopping activated")
+                        break
+                    elif learning_rate_annealing == True:
+                        print("Reloading best model and reducing learning rate by half ...")
+                        self.weights = np.load("best_weights.npy", allow_pickle=True).item()
+                        self.biases = np.load("best_biases.npy", allow_pickle=True).item()
+                        self.eta /= 2
                     print(f"Epoch {epoch}/{max_epochs} - Training Loss: {avg_training_loss:.4f}, Training Accuracy: {(accurate_predictions_training / num_samples) * 100:.4}%, Validation Loss: {validation_loss:.4f}, Validation Accuracy: {(accurate_predictions*100)/x_val.shape[0]: .4f}%")
-                    break
+                    
             else:
                 best_validation_loss = validation_loss
                 patience_counter = 0
+                print(f"Epoch {epoch}/{max_epochs} - Training Loss: {avg_training_loss:.4f}, Training Accuracy: {(accurate_predictions_training / num_samples) * 100:.4}%, Validation Loss: {validation_loss:.4f}, Validation Accuracy: {(accurate_predictions / x_val.shape[0]) * 100: .4f}%")
+                best_weights = self.weights
+                best_biases = self.biases
+                print(f"Storing current model parameters (epoch {epoch}) ...")
+                np.save("best_weights.npy", best_weights)
+                np.save("best_biases.npy", best_biases)
 
-            print(f"Epoch {epoch}/{max_epochs} - Training Loss: {avg_training_loss:.4f}, Training Accuracy: {(accurate_predictions_training / num_samples) * 100:.4}%, Validation Loss: {validation_loss:.4f}, Validation Accuracy: {(accurate_predictions / x_val.shape[0]) * 100: .4f}%")
+            
