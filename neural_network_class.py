@@ -23,10 +23,16 @@ class neural_network:
             self.a = {f"a{i+1}": np.zeros((self.layer_size[i+1],1)) for i in range(self.num_layers + 1)}        
             self.h = {f"h{i+1}": np.zeros((self.layer_size[i+1],1)) for i in range(self.num_layers + 1)}
         elif self.weight_initialization_method=="xavier":
-            self.weights = {f"W{i+1}": np.random.uniform(-np.sqrt(6/(self.num_layers[i+1]+self.num_layers[i])) , np.sqrt(6/(self.num_layers[i+1]+self.num_layers[i])),\
+            self.weights = {f"W{i+1}": np.random.uniform(-np.sqrt(6/(self.layer_size[i+1]+self.layer_size[i])) , np.sqrt(6/(self.layer_size[i+1]+self.layer_size[i])),\
                                                           (self.layer_size[i+1], self.layer_size[i])) for i in range(self.num_layers + 1)}
-            self.biases = {f"b{i+1}": np.random.uniform(-np.sqrt(6/(1+self.layer_size[i+1])), np.sqrt(6/(1+self.layer_size[i+1])), \
-                                                        (self.layer_size[i+1],1)) for i in range(self.num_layers + 1)}
+            # self.biases = {f"b{i+1}": np.random.uniform(-np.sqrt(6/(1+self.layer_size[i+1])), np.sqrt(6/(1+self.layer_size[i+1])), \
+                                                        # (self.layer_size[i+1],1)) for i in range(self.num_layers + 1)}
+            self.biases = {f"b{i+1}": np.random.randn(self.layer_size[i+1],1) * 0.01 for i in range(self.num_layers + 1)}
+            self.a = {f"a{i+1}": np.zeros((self.layer_size[i+1],1)) for i in range(self.num_layers + 1)}        
+            self.h = {f"h{i+1}": np.zeros((self.layer_size[i+1],1)) for i in range(self.num_layers + 1)}
+        elif self.weight_initialization_method=="he":
+            self.weights = {f"W{i+1}": np.random.randn(self.layer_size[i+1], self.layer_size[i]) * np.sqrt(2 / self.layer_size[i]) for i in range(self.num_layers + 1)}
+            self.biases = {f"b{i+1}": np.random.randn(self.layer_size[i+1],1) * 0.01 for i in range(self.num_layers + 1)}
             self.a = {f"a{i+1}": np.zeros((self.layer_size[i+1],1)) for i in range(self.num_layers + 1)}        
             self.h = {f"h{i+1}": np.zeros((self.layer_size[i+1],1)) for i in range(self.num_layers + 1)}
 
@@ -162,9 +168,6 @@ class neural_network:
                     d_theta = {key: value + self.gradients[key] for key, value in d_theta.items()}                        
                     batch_loss += -np.log(self.h[f"h{self.num_layers+1}"][output, 0] + 1e-9)  # Avoid log(0)
 
-                # Average gradients over batch
-                # d_theta = {key: value / len(x_batch) for key, value in d_theta.items()}
-
                 # Update weights and biases
                 t += 1
                 if optimizer=="sgd":
@@ -187,15 +190,15 @@ class neural_network:
                     velocities = {key: beta2 * value + (1-beta2) * np.square(d_theta[key]) for key, value in velocities.items()}
                     momentums_hat = {key: value / (1-pow(beta1,t)) for key, value in momentums.items()}
                     velocities_hat = {key: value / (1-pow(beta2,t)) for key, value in velocities.items()}
-                    self.weights = {key: value - self.eta/ (np.sqrt(velocities_hat[key])+1e-9) * (momentums_hat[key] + weight_decay*value) for key, value in self.weights.items()}
+                    self.weights = {key: value * (1-weight_decay*self.eta) - self.eta/ (np.sqrt(velocities_hat[key])+1e-9) * (momentums_hat[key]) for key, value in self.weights.items()}
                     self.biases = {key: value - self.eta/ (np.sqrt(velocities_hat[key])+1e-9) * momentums_hat[key] for key, value in self.biases.items()}
                 elif optimizer=="nadam":
                     momentums = {key: beta1 * value + (1-beta1) * d_theta[key] for key, value in momentums.items()}
                     momentums_hat = {key: value / (1-pow(beta1,t)) for key, value in momentums.items()}
                     velocities = {key: beta2 * value + (1-beta2) * np.square(d_theta[key]) for key, value in velocities.items()}
                     velocities_hat = {key: value / (1-pow(beta2,t)) for key, value in velocities.items()}
-                    self.weights = {key: value - (self.eta/ (np.sqrt(velocities_hat[key])+1e-9)) * (beta1*momentums_hat[key] + \
-                                                                                                    ((1-beta1)/(1-pow(beta1,t)))*d_theta[key] + weight_decay*value) for key, value in self.weights.items()}
+                    self.weights = {key: value * (1-weight_decay*self.eta) - (self.eta/ (np.sqrt(velocities_hat[key])+1e-9)) * (beta1*momentums_hat[key] + \
+                                                                                                    ((1-beta1)/(1-pow(beta1,t)))*d_theta[key]) for key, value in self.weights.items()}
                     self.biases = {key: value - (self.eta/ (np.sqrt(velocities_hat[key])+1e-9)) * (beta1*momentums_hat[key] + \
                                                                                                     ((1-beta1)/(1-pow(beta1,t)))*d_theta[key]) for key, value in self.biases.items()}
 

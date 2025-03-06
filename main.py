@@ -17,5 +17,5 @@ assert y_test.shape == (10000,)
 
 # run_forward_backward_prop(x_train, y_train)
 
-nn = neural_network(num_layers=3,hidden_layer_size=128,eta=1e-3,activation_method="sigmoid")
-nn.gradient_descent(x_train, y_train, batch_size=64, max_epochs=5, optimizer="adam", weight_decay=0)
+nn = neural_network(num_layers=3, hidden_layer_size=128, eta=1e-4, activation_method="relu", weight_initialization_method="he")
+nn.gradient_descent(x_train, y_train, batch_size=64, max_epochs=2, optimizer="nadam", weight_decay=5e-1)
