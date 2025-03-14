@@ -1,0 +1,44 @@
+Training Progress:  73%|█████████████████████████████████████████████████████████████████▎                       | 22/30 [16:34<08:53, 66.68s/it]
+Epoch 1/30 - Training Loss: 3.6437, Training Accuracy: 64.89%, Validation Loss: 2.9758, Validation Accuracy:  78.3000%
+Storing current model parameters (epoch 1) ...
+Epoch 2/30 - Training Loss: 4.2627, Training Accuracy: 69.4963%, Validation Loss: 7.4973, Validation Accuracy:  59.7333%
+Epoch 3/30 - Training Loss: 5.0348, Training Accuracy: 69.1611%, Validation Loss: 6.2376, Validation Accuracy:  67.4000%
+Epoch 4/30 - Training Loss: 4.7762, Training Accuracy: 68.2704%, Validation Loss: 5.3338, Validation Accuracy:  70.7833%
+Reloading best model and reducing learning rate by half ...
+Epoch 5/30 - Training Loss: 3.1273, Training Accuracy: 74.0574%, Validation Loss: 3.5475, Validation Accuracy:  73.2833%
+Epoch 6/30 - Training Loss: 3.4241, Training Accuracy: 73.6389%, Validation Loss: 5.1189, Validation Accuracy:  68.5667%
+Epoch 7/30 - Training Loss: 3.5267, Training Accuracy: 76.39%, Validation Loss: 2.3761, Validation Accuracy:  80.0333%
+Storing current model parameters (epoch 7) ...
+Epoch 8/30 - Training Loss: 3.0097, Training Accuracy: 74.4296%, Validation Loss: 5.7247, Validation Accuracy:  70.0167%
+Epoch 9/30 - Training Loss: 3.4641, Training Accuracy: 77.2370%, Validation Loss: 2.8089, Validation Accuracy:  76.2500%
+Epoch 10/30 - Training Loss: 2.2499, Training Accuracy: 77.2796%, Validation Loss: 2.4179, Validation Accuracy:  72.5167%
+Reloading best model and reducing learning rate by half ...
+Epoch 11/30 - Training Loss: 1.7312, Training Accuracy: 79.89%, Validation Loss: 1.3994, Validation Accuracy:  78.8667%
+Storing current model parameters (epoch 11) ...
+Epoch 12/30 - Training Loss: 1.6491, Training Accuracy: 75.1593%, Validation Loss: 1.9101, Validation Accuracy:  67.6333%
+Epoch 13/30 - Training Loss: 2.3560, Training Accuracy: 72.7926%, Validation Loss: 5.3900, Validation Accuracy:  71.0833%
+Epoch 14/30 - Training Loss: 4.1130, Training Accuracy: 78.0296%, Validation Loss: 5.4290, Validation Accuracy:  71.1833%
+Reloading best model and reducing learning rate by half ...
+Epoch 15/30 - Training Loss: 1.1374, Training Accuracy: 80.0519%, Validation Loss: 1.4432, Validation Accuracy:  73.4167%
+Epoch 16/30 - Training Loss: 1.3466, Training Accuracy: 75.21%, Validation Loss: 1.3676, Validation Accuracy:  75.3667%
+Storing current model parameters (epoch 16) ...
+Epoch 17/30 - Training Loss: 1.4265, Training Accuracy: 74.7130%, Validation Loss: 1.6801, Validation Accuracy:  76.3667%
+Epoch 18/30 - Training Loss: 1.5946, Training Accuracy: 75.1722%, Validation Loss: 1.3898, Validation Accuracy:  75.1667%
+Epoch 19/30 - Training Loss: 1.7417, Training Accuracy: 72.3593%, Validation Loss: 1.4955, Validation Accuracy:  71.3167%
+Reloading best model and reducing learning rate by half ...
+Epoch 20/30 - Training Loss: 1.1581, Training Accuracy: 76.99%, Validation Loss: 1.3195, Validation Accuracy:  76.9667%
+Storing current model parameters (epoch 20) ...
+Epoch 21/30 - Training Loss: 1.1879, Training Accuracy: 77.2685%, Validation Loss: 1.4010, Validation Accuracy:  75.1667%
+Epoch 22/30 - Training Loss: 1.2317, Training Accuracy: 76.9444%, Validation Loss: 1.7341, Validation Accuracy:  76.6667%
+Epoch 23/30 - Training Loss: 1.2600, Training Accuracy: 77.2630%, Validation Loss: 1.5220, Validation Accuracy:  76.7833%
+Reloading best model and reducing learning rate by half ...
+Epoch 24/30 - Training Loss: 1.0986, Training Accuracy: 78.31%, Validation Loss: 1.2129, Validation Accuracy:  78.6167%
+Storing current model parameters (epoch 24) ...
+Epoch 25/30 - Training Loss: 1.0651, Training Accuracy: 79.2167%, Validation Loss: 1.2891, Validation Accuracy:  79.5167%
+Epoch 26/30 - Training Loss: 1.0600, Training Accuracy: 79.0296%, Validation Loss: 1.4072, Validation Accuracy:  78.5333%
+Epoch 27/30 - Training Loss: 1.0464, Training Accuracy: 79.79%, Validation Loss: 1.2019, Validation Accuracy:  81.2167%
+Storing current model parameters (epoch 27) ...
+Epoch 28/30 - Training Loss: 1.0574, Training Accuracy: 79.4296%, Validation Loss: 1.2573, Validation Accuracy:  75.9167%
+Epoch 29/30 - Training Loss: 1.0488, Training Accuracy: 79.6593%, Validation Loss: 1.5108, Validation Accuracy:  78.6833%
+Epoch 30/30 - Training Loss: 1.0763, Training Accuracy: 79.7000%, Validation Loss: 1.3286, Validation Accuracy:  81.1667%
+Reloading best model and reducing learning rate by half ...

@@ -1,0 +1,20 @@
+{"time":"2025-03-07T15:03:19.36418+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250307_150319-dr6yaxji/logs/debug-core.log"}
+{"time":"2025-03-07T15:03:19.477671+05:30","level":"INFO","msg":"created new stream","id":"dr6yaxji"}
+{"time":"2025-03-07T15:03:19.478046+05:30","level":"INFO","msg":"stream: started","id":"dr6yaxji"}
+{"time":"2025-03-07T15:03:19.478211+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"dr6yaxji"}
+{"time":"2025-03-07T15:03:19.478229+05:30","level":"INFO","msg":"handler: started","stream_id":"dr6yaxji"}
+{"time":"2025-03-07T15:03:19.478375+05:30","level":"INFO","msg":"sender: started","stream_id":"dr6yaxji"}
+{"time":"2025-03-07T15:03:20.610314+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-07T15:04:20.746211+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-03-07T15:04:52.792806+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-03-07T15:05:26.91314+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-03-07T15:05:59.990827+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.68.214:52097->35.186.228.49:443: read: can't assign requested address"}
+{"time":"2025-03-07T15:13:41.071468+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-07T15:13:41.074455+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-07T15:13:42.08704+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.101546083},{"desc":"uploading wandb-summary.json","runtime_seconds":0.100303875}],"total_operations":2}}
+{"time":"2025-03-07T15:13:42.813872+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-07T15:13:43.124111+05:30","level":"INFO","msg":"stream: closing","id":"dr6yaxji"}
+{"time":"2025-03-07T15:13:43.124163+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"dr6yaxji"}
+{"time":"2025-03-07T15:13:43.124296+05:30","level":"INFO","msg":"handler: closed","stream_id":"dr6yaxji"}
+{"time":"2025-03-07T15:13:43.124364+05:30","level":"INFO","msg":"sender: closed","stream_id":"dr6yaxji"}
+{"time":"2025-03-07T15:13:43.124592+05:30","level":"INFO","msg":"stream: closed","id":"dr6yaxji"}

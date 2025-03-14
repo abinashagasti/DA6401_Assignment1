@@ -1,0 +1,17 @@
+{"time":"2025-03-07T11:54:20.294648+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250307_115420-efc48sqv/logs/debug-core.log"}
+{"time":"2025-03-07T11:54:20.411531+05:30","level":"INFO","msg":"created new stream","id":"efc48sqv"}
+{"time":"2025-03-07T11:54:20.411578+05:30","level":"INFO","msg":"stream: started","id":"efc48sqv"}
+{"time":"2025-03-07T11:54:20.411599+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"efc48sqv"}
+{"time":"2025-03-07T11:54:20.411621+05:30","level":"INFO","msg":"handler: started","stream_id":"efc48sqv"}
+{"time":"2025-03-07T11:54:20.411661+05:30","level":"INFO","msg":"sender: started","stream_id":"efc48sqv"}
+{"time":"2025-03-07T11:54:21.616822+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-07T12:14:30.357856+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.227.134:50450->35.186.228.49:443: read: operation timed out"}
+{"time":"2025-03-07T12:27:05.41817+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-07T12:27:05.419919+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-07T12:27:06.431772+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.178199625},{"desc":"uploading wandb-summary.json","runtime_seconds":0.178170875}],"total_operations":2}}
+{"time":"2025-03-07T12:27:07.202624+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-07T12:27:08.273644+05:30","level":"INFO","msg":"stream: closing","id":"efc48sqv"}
+{"time":"2025-03-07T12:27:08.273683+05:30","level":"INFO","msg":"handler: closed","stream_id":"efc48sqv"}
+{"time":"2025-03-07T12:27:08.273692+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"efc48sqv"}
+{"time":"2025-03-07T12:27:08.273704+05:30","level":"INFO","msg":"sender: closed","stream_id":"efc48sqv"}
+{"time":"2025-03-07T12:27:08.273759+05:30","level":"INFO","msg":"stream: closed","id":"efc48sqv"}

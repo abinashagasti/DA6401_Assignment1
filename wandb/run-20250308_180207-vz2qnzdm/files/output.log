@@ -1,0 +1,11 @@
+Training Progress:  20%|██████████████████                                                                        | 6/30 [07:18<29:13, 73.07s/it]
+Epoch 1/30 - Training Loss: 1.3995, Training Accuracy: 69.69%, Validation Loss: 0.9656, Validation Accuracy:  73.5833%
+Storing current model parameters (epoch 1) ...
+Epoch 2/30 - Training Loss: 1.4840, Training Accuracy: 73.4574%, Validation Loss: 2.0399, Validation Accuracy:  71.5000%
+Epoch 3/30 - Training Loss: 1.2103, Training Accuracy: 75.0444%, Validation Loss: 1.1884, Validation Accuracy:  75.0333%
+Epoch 4/30 - Training Loss: 1.1295, Training Accuracy: 76.2352%, Validation Loss: 1.0624, Validation Accuracy:  77.0333%
+Reloading best model and reducing learning rate by half ...
+Epoch 5/30 - Training Loss: 1.0111, Training Accuracy: 77.9204%, Validation Loss: 0.9919, Validation Accuracy:  80.4333%
+Epoch 6/30 - Training Loss: 1.0906, Training Accuracy: 77.9148%, Validation Loss: 1.0079, Validation Accuracy:  76.9667%
+Epoch 7/30 - Training Loss: 0.9153, Training Accuracy: 78.7444%, Validation Loss: 1.0798, Validation Accuracy:  74.7500%
+Early stopping activated

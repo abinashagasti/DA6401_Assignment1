@@ -1,0 +1,18 @@
+{"time":"2025-03-08T16:42:23.475359+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250308_164223-per4lcep/logs/debug-core.log"}
+{"time":"2025-03-08T16:42:23.589017+05:30","level":"INFO","msg":"created new stream","id":"per4lcep"}
+{"time":"2025-03-08T16:42:23.589059+05:30","level":"INFO","msg":"stream: started","id":"per4lcep"}
+{"time":"2025-03-08T16:42:23.589078+05:30","level":"INFO","msg":"handler: started","stream_id":"per4lcep"}
+{"time":"2025-03-08T16:42:23.589095+05:30","level":"INFO","msg":"sender: started","stream_id":"per4lcep"}
+{"time":"2025-03-08T16:42:23.589132+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"per4lcep"}
+{"time":"2025-03-08T16:42:23.924836+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-08T16:49:54.776445+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/per4lcep/file_stream\": read tcp 10.22.51.239:49440->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-03-08T17:05:13.243696+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/per4lcep/file_stream\": read tcp 10.22.51.239:49569->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-03-08T17:14:36.420998+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-08T17:14:36.424337+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-08T17:14:37.429631+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.399336834,"progress":"4.5KB/4.5KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.398277667,"progress":"257B/257B"},{"desc":"uploading config.yaml","runtime_seconds":0.132761709,"progress":"780B/780B"}],"total_operations":3}}
+{"time":"2025-03-08T17:14:37.672042+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-08T17:14:38.011348+05:30","level":"INFO","msg":"stream: closing","id":"per4lcep"}
+{"time":"2025-03-08T17:14:38.011385+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"per4lcep"}
+{"time":"2025-03-08T17:14:38.011581+05:30","level":"INFO","msg":"handler: closed","stream_id":"per4lcep"}
+{"time":"2025-03-08T17:14:38.011629+05:30","level":"INFO","msg":"sender: closed","stream_id":"per4lcep"}
+{"time":"2025-03-08T17:14:38.01164+05:30","level":"INFO","msg":"stream: closed","id":"per4lcep"}

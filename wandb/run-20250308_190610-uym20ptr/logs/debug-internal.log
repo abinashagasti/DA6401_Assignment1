@@ -1,0 +1,21 @@
+{"time":"2025-03-08T19:06:10.510937+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250308_190610-uym20ptr/logs/debug-core.log"}
+{"time":"2025-03-08T19:06:10.621155+05:30","level":"INFO","msg":"created new stream","id":"uym20ptr"}
+{"time":"2025-03-08T19:06:10.621203+05:30","level":"INFO","msg":"stream: started","id":"uym20ptr"}
+{"time":"2025-03-08T19:06:10.621256+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"uym20ptr"}
+{"time":"2025-03-08T19:06:10.621426+05:30","level":"INFO","msg":"sender: started","stream_id":"uym20ptr"}
+{"time":"2025-03-08T19:06:10.621511+05:30","level":"INFO","msg":"handler: started","stream_id":"uym20ptr"}
+{"time":"2025-03-08T19:06:10.986157+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-08T19:14:41.985733+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/uym20ptr/file_stream\": write tcp 10.22.51.239:51192->35.186.228.49:443: write: broken pipe"}
+{"time":"2025-03-08T19:17:42.053732+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/uym20ptr/file_stream\": read tcp 10.22.51.239:51248->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-03-08T19:22:42.000078+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/uym20ptr/file_stream\": read tcp 10.22.51.239:51320->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-03-08T19:25:57.036525+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/uym20ptr/file_stream\": dial tcp 35.186.228.49:443: connect: connection reset by peer"}
+{"time":"2025-03-08T19:25:59.374318+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/uym20ptr/file_stream\": read tcp 10.22.51.239:51390->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-03-08T19:28:20.635058+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-08T19:28:20.639392+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-08T19:28:21.65109+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.067126209},{"desc":"uploading wandb-summary.json","runtime_seconds":0.065640875}],"total_operations":2}}
+{"time":"2025-03-08T19:28:22.254063+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-08T19:28:22.733767+05:30","level":"INFO","msg":"stream: closing","id":"uym20ptr"}
+{"time":"2025-03-08T19:28:22.733864+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"uym20ptr"}
+{"time":"2025-03-08T19:28:22.734014+05:30","level":"INFO","msg":"handler: closed","stream_id":"uym20ptr"}
+{"time":"2025-03-08T19:28:22.734222+05:30","level":"INFO","msg":"sender: closed","stream_id":"uym20ptr"}
+{"time":"2025-03-08T19:28:22.734285+05:30","level":"INFO","msg":"stream: closed","id":"uym20ptr"}

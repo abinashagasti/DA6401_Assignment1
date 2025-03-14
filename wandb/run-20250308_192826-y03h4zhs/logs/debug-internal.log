@@ -1,0 +1,29 @@
+{"time":"2025-03-08T19:28:26.647069+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250308_192826-y03h4zhs/logs/debug-core.log"}
+{"time":"2025-03-08T19:28:26.756982+05:30","level":"INFO","msg":"created new stream","id":"y03h4zhs"}
+{"time":"2025-03-08T19:28:26.757039+05:30","level":"INFO","msg":"stream: started","id":"y03h4zhs"}
+{"time":"2025-03-08T19:28:26.757053+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"y03h4zhs"}
+{"time":"2025-03-08T19:28:26.757071+05:30","level":"INFO","msg":"sender: started","stream_id":"y03h4zhs"}
+{"time":"2025-03-08T19:28:26.757096+05:30","level":"INFO","msg":"handler: started","stream_id":"y03h4zhs"}
+{"time":"2025-03-08T19:28:27.089419+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-08T19:28:42.980006+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/y03h4zhs/file_stream\": read tcp 10.22.51.239:51438->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-03-08T19:30:27.965107+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/y03h4zhs/file_stream\": dial tcp 35.186.228.49:443: connect: connection reset by peer"}
+{"time":"2025-03-08T19:31:42.677456+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/y03h4zhs/file_stream\": dial tcp 35.186.228.49:443: connect: operation timed out"}
+{"time":"2025-03-08T19:31:44.937366+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/y03h4zhs/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-08T19:31:49.316289+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/y03h4zhs/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-08T19:31:57.335646+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-03-08T19:31:58.294893+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/y03h4zhs/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-08T19:32:15.757624+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/y03h4zhs/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-08T19:32:28.328359+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.22.51.239:51433->35.186.228.49:443: read: can't assign requested address"}
+{"time":"2025-03-08T19:32:32.486333+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-08T19:32:41.61644+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-08T19:32:49.162267+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/y03h4zhs/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-08T19:32:59.547746+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-08T19:35:21.24837+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-08T19:35:21.249673+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-08T19:35:22.261966+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.346969083,"progress":"2.3KB/2.3KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.346913792,"progress":"240B/240B"},{"desc":"uploading config.yaml","runtime_seconds":0.044686375,"progress":"782B/782B"}],"total_operations":3}}
+{"time":"2025-03-08T19:35:22.626196+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-08T19:35:23.406006+05:30","level":"INFO","msg":"stream: closing","id":"y03h4zhs"}
+{"time":"2025-03-08T19:35:23.406072+05:30","level":"INFO","msg":"handler: closed","stream_id":"y03h4zhs"}
+{"time":"2025-03-08T19:35:23.4061+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"y03h4zhs"}
+{"time":"2025-03-08T19:35:23.406624+05:30","level":"INFO","msg":"sender: closed","stream_id":"y03h4zhs"}
+{"time":"2025-03-08T19:35:23.406649+05:30","level":"INFO","msg":"stream: closed","id":"y03h4zhs"}

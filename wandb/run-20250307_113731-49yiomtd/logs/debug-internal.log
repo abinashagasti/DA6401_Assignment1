@@ -1,0 +1,16 @@
+{"time":"2025-03-07T11:37:31.57854+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250307_113731-49yiomtd/logs/debug-core.log"}
+{"time":"2025-03-07T11:37:31.695972+05:30","level":"INFO","msg":"created new stream","id":"49yiomtd"}
+{"time":"2025-03-07T11:37:31.696014+05:30","level":"INFO","msg":"stream: started","id":"49yiomtd"}
+{"time":"2025-03-07T11:37:31.696028+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"49yiomtd"}
+{"time":"2025-03-07T11:37:31.696055+05:30","level":"INFO","msg":"sender: started","stream_id":"49yiomtd"}
+{"time":"2025-03-07T11:37:31.696033+05:30","level":"INFO","msg":"handler: started","stream_id":"49yiomtd"}
+{"time":"2025-03-07T11:37:32.659329+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-07T11:46:53.881841+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-07T11:46:53.883326+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-07T11:46:54.889865+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.361859583,"progress":"5.7KB/5.7KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.361856875,"progress":"213B/213B"},{"desc":"uploading config.yaml","runtime_seconds":0.043987083,"progress":"773B/773B"}],"total_operations":3}}
+{"time":"2025-03-07T11:46:56.074274+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-07T11:46:56.496346+05:30","level":"INFO","msg":"stream: closing","id":"49yiomtd"}
+{"time":"2025-03-07T11:46:56.496388+05:30","level":"INFO","msg":"handler: closed","stream_id":"49yiomtd"}
+{"time":"2025-03-07T11:46:56.496409+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"49yiomtd"}
+{"time":"2025-03-07T11:46:56.498288+05:30","level":"INFO","msg":"sender: closed","stream_id":"49yiomtd"}
+{"time":"2025-03-07T11:46:56.498359+05:30","level":"INFO","msg":"stream: closed","id":"49yiomtd"}

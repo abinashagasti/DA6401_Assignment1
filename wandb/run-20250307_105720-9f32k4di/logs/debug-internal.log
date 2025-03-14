@@ -1,0 +1,16 @@
+{"time":"2025-03-07T10:57:20.806733+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250307_105720-9f32k4di/logs/debug-core.log"}
+{"time":"2025-03-07T10:57:20.919491+05:30","level":"INFO","msg":"created new stream","id":"9f32k4di"}
+{"time":"2025-03-07T10:57:20.919713+05:30","level":"INFO","msg":"stream: started","id":"9f32k4di"}
+{"time":"2025-03-07T10:57:20.919902+05:30","level":"INFO","msg":"handler: started","stream_id":"9f32k4di"}
+{"time":"2025-03-07T10:57:20.919912+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"9f32k4di"}
+{"time":"2025-03-07T10:57:20.920056+05:30","level":"INFO","msg":"sender: started","stream_id":"9f32k4di"}
+{"time":"2025-03-07T10:57:22.439294+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-07T11:15:28.127886+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-07T11:15:28.13083+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-07T11:15:29.141627+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":0.427073167}],"total_operations":1}}
+{"time":"2025-03-07T11:15:30.463874+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-07T11:15:30.979748+05:30","level":"INFO","msg":"stream: closing","id":"9f32k4di"}
+{"time":"2025-03-07T11:15:30.979851+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"9f32k4di"}
+{"time":"2025-03-07T11:15:30.980031+05:30","level":"INFO","msg":"handler: closed","stream_id":"9f32k4di"}
+{"time":"2025-03-07T11:15:30.980163+05:30","level":"INFO","msg":"sender: closed","stream_id":"9f32k4di"}
+{"time":"2025-03-07T11:15:30.980182+05:30","level":"INFO","msg":"stream: closed","id":"9f32k4di"}

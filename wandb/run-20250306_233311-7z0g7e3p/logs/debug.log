@@ -1,0 +1,30 @@
+2025-03-06 23:33:11,162 INFO    Thread-3 (_run_job):26805 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-03-06 23:33:11,162 INFO    Thread-3 (_run_job):26805 [wandb_setup.py:_flush():67] Configure stats pid to 26805
+2025-03-06 23:33:11,162 INFO    Thread-3 (_run_job):26805 [wandb_setup.py:_flush():67] Loading settings from /Users/abinashagasti/.config/wandb/settings
+2025-03-06 23:33:11,163 INFO    Thread-3 (_run_job):26805 [wandb_setup.py:_flush():67] Loading settings from /Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/settings
+2025-03-06 23:33:11,163 INFO    Thread-3 (_run_job):26805 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-06 23:33:11,164 INFO    Thread-3 (_run_job):26805 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_233311-7z0g7e3p/logs/debug.log
+2025-03-06 23:33:11,164 INFO    Thread-3 (_run_job):26805 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_233311-7z0g7e3p/logs/debug-internal.log
+2025-03-06 23:33:11,164 INFO    Thread-3 (_run_job):26805 [wandb_init.py:init():761] calling init triggers
+2025-03-06 23:33:11,165 INFO    Thread-3 (_run_job):26805 [wandb_init.py:init():766] wandb.init called with sweep_config: {'activation': 'relu', 'batch_size': 64, 'epochs': 15, 'eta': 0.0006359681350031974, 'hidden_size': 128, 'num_layers': 4, 'optimizer': 'sgd', 'weight_decay': 0.0005, 'weight_init': 'xavier'}
+config: {'_wandb': {}}
+2025-03-06 23:33:11,165 INFO    Thread-3 (_run_job):26805 [wandb_init.py:init():784] starting backend
+2025-03-06 23:33:11,165 INFO    Thread-3 (_run_job):26805 [wandb_init.py:init():788] sending inform_init request
+2025-03-06 23:33:11,189 INFO    Thread-3 (_run_job):26805 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2025-03-06 23:33:11,189 INFO    Thread-3 (_run_job):26805 [wandb_init.py:init():798] backend started and connected
+2025-03-06 23:33:11,190 INFO    Thread-3 (_run_job):26805 [wandb_run.py:_config_callback():1261] config_cb None None {'activation': 'relu', 'batch_size': 64, 'epochs': 15, 'eta': 0.0006359681350031974, 'hidden_size': 128, 'num_layers': 4, 'optimizer': 'sgd', 'weight_decay': 0.0005, 'weight_init': 'xavier'}
+2025-03-06 23:33:11,193 INFO    Thread-3 (_run_job):26805 [wandb_init.py:init():891] updated telemetry
+2025-03-06 23:33:11,223 INFO    Thread-3 (_run_job):26805 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-03-06 23:33:11,664 INFO    Thread-3 (_run_job):26805 [wandb_init.py:init():990] starting run threads in backend
+2025-03-06 23:33:11,763 INFO    Thread-3 (_run_job):26805 [wandb_run.py:_console_start():2375] atexit reg
+2025-03-06 23:33:11,763 INFO    Thread-3 (_run_job):26805 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-03-06 23:33:11,764 INFO    Thread-3 (_run_job):26805 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-03-06 23:33:11,764 INFO    Thread-3 (_run_job):26805 [wandb_run.py:_redirect():2315] Redirects installed.
+2025-03-06 23:33:11,766 INFO    Thread-3 (_run_job):26805 [wandb_init.py:init():1032] run started, returning control to user process
+2025-03-06 23:42:03,176 INFO    Thread-3 (_run_job):26805 [wandb_run.py:_finish():2112] finishing run ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/7z0g7e3p
+2025-03-06 23:42:03,177 INFO    Thread-3 (_run_job):26805 [wandb_run.py:_atexit_cleanup():2340] got exitcode: 0
+2025-03-06 23:42:03,177 INFO    Thread-3 (_run_job):26805 [wandb_run.py:_restore():2322] restore
+2025-03-06 23:42:03,180 INFO    Thread-3 (_run_job):26805 [wandb_run.py:_restore():2328] restore done
+2025-03-06 23:42:06,348 INFO    Thread-3 (_run_job):26805 [wandb_run.py:_footer_history_summary_info():3956] rendering history
+2025-03-06 23:42:06,349 INFO    Thread-3 (_run_job):26805 [wandb_run.py:_footer_history_summary_info():3988] rendering summary
+2025-03-06 23:42:06,350 INFO    Thread-3 (_run_job):26805 [wandb_run.py:_footer_sync_info():3917] logging synced files

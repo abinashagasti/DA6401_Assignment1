@@ -1,0 +1,17 @@
+{"time":"2025-03-08T18:09:33.344581+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250308_180933-br3z6evk/logs/debug-core.log"}
+{"time":"2025-03-08T18:09:33.457129+05:30","level":"INFO","msg":"created new stream","id":"br3z6evk"}
+{"time":"2025-03-08T18:09:33.457173+05:30","level":"INFO","msg":"stream: started","id":"br3z6evk"}
+{"time":"2025-03-08T18:09:33.457191+05:30","level":"INFO","msg":"handler: started","stream_id":"br3z6evk"}
+{"time":"2025-03-08T18:09:33.457202+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"br3z6evk"}
+{"time":"2025-03-08T18:09:33.457246+05:30","level":"INFO","msg":"sender: started","stream_id":"br3z6evk"}
+{"time":"2025-03-08T18:09:33.78003+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-08T18:15:35.025455+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/br3z6evk/file_stream\": read tcp 10.22.51.239:50312->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-03-08T18:23:32.1013+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-08T18:23:32.102547+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-08T18:23:33.112105+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.172576083},{"desc":"uploading wandb-summary.json","runtime_seconds":0.172556541}],"total_operations":2}}
+{"time":"2025-03-08T18:23:33.653114+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-08T18:23:34.43516+05:30","level":"INFO","msg":"stream: closing","id":"br3z6evk"}
+{"time":"2025-03-08T18:23:34.435206+05:30","level":"INFO","msg":"handler: closed","stream_id":"br3z6evk"}
+{"time":"2025-03-08T18:23:34.435228+05:30","level":"INFO","msg":"sender: closed","stream_id":"br3z6evk"}
+{"time":"2025-03-08T18:23:34.435217+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"br3z6evk"}
+{"time":"2025-03-08T18:23:34.435673+05:30","level":"INFO","msg":"stream: closed","id":"br3z6evk"}

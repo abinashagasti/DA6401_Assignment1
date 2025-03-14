@@ -1,0 +1,18 @@
+{"time":"2025-03-08T18:48:28.966665+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250308_184828-ntzh2b8w/logs/debug-core.log"}
+{"time":"2025-03-08T18:48:29.081912+05:30","level":"INFO","msg":"created new stream","id":"ntzh2b8w"}
+{"time":"2025-03-08T18:48:29.081953+05:30","level":"INFO","msg":"stream: started","id":"ntzh2b8w"}
+{"time":"2025-03-08T18:48:29.08197+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"ntzh2b8w"}
+{"time":"2025-03-08T18:48:29.081997+05:30","level":"INFO","msg":"handler: started","stream_id":"ntzh2b8w"}
+{"time":"2025-03-08T18:48:29.082061+05:30","level":"INFO","msg":"sender: started","stream_id":"ntzh2b8w"}
+{"time":"2025-03-08T18:48:29.483119+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-08T18:53:00.795351+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/ntzh2b8w/file_stream\": read tcp 10.22.51.239:50743->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-03-08T18:58:00.814058+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/ntzh2b8w/file_stream\": read tcp 10.22.51.239:50826->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-03-08T19:05:57.815232+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-08T19:05:57.816593+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-08T19:05:58.833549+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.43367825,"progress":"3.4KB/3.4KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.433654791,"progress":"257B/257B"},{"desc":"uploading config.yaml","runtime_seconds":0.13608375,"progress":"781B/781B"}],"total_operations":3}}
+{"time":"2025-03-08T19:05:59.10525+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-08T19:05:59.674878+05:30","level":"INFO","msg":"stream: closing","id":"ntzh2b8w"}
+{"time":"2025-03-08T19:05:59.67492+05:30","level":"INFO","msg":"handler: closed","stream_id":"ntzh2b8w"}
+{"time":"2025-03-08T19:05:59.674946+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"ntzh2b8w"}
+{"time":"2025-03-08T19:05:59.675071+05:30","level":"INFO","msg":"sender: closed","stream_id":"ntzh2b8w"}
+{"time":"2025-03-08T19:05:59.675116+05:30","level":"INFO","msg":"stream: closed","id":"ntzh2b8w"}

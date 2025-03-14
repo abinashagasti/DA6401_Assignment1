@@ -1,0 +1,17 @@
+{"time":"2025-03-08T11:56:53.502779+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250308_115653-ywnkp2te/logs/debug-core.log"}
+{"time":"2025-03-08T11:56:53.620145+05:30","level":"INFO","msg":"created new stream","id":"ywnkp2te"}
+{"time":"2025-03-08T11:56:53.62019+05:30","level":"INFO","msg":"stream: started","id":"ywnkp2te"}
+{"time":"2025-03-08T11:56:53.620208+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"ywnkp2te"}
+{"time":"2025-03-08T11:56:53.62024+05:30","level":"INFO","msg":"handler: started","stream_id":"ywnkp2te"}
+{"time":"2025-03-08T11:56:53.620256+05:30","level":"INFO","msg":"sender: started","stream_id":"ywnkp2te"}
+{"time":"2025-03-08T11:56:54.351763+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-08T12:10:10.22046+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/ywnkp2te/file_stream\": dial tcp 35.186.228.49:443: connect: connection reset by peer"}
+{"time":"2025-03-08T12:12:07.04902+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-08T12:12:07.055182+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-08T12:12:08.05978+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.23413575,"progress":"2.5KB/2.5KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.234078542,"progress":"258B/258B"}],"total_operations":2}}
+{"time":"2025-03-08T12:12:08.547165+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-08T12:12:09.311958+05:30","level":"INFO","msg":"stream: closing","id":"ywnkp2te"}
+{"time":"2025-03-08T12:12:09.311988+05:30","level":"INFO","msg":"handler: closed","stream_id":"ywnkp2te"}
+{"time":"2025-03-08T12:12:09.312+05:30","level":"INFO","msg":"sender: closed","stream_id":"ywnkp2te"}
+{"time":"2025-03-08T12:12:09.311998+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"ywnkp2te"}
+{"time":"2025-03-08T12:12:09.312358+05:30","level":"INFO","msg":"stream: closed","id":"ywnkp2te"}

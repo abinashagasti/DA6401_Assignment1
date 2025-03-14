@@ -1,0 +1,13 @@
+{"time":"2025-03-10T00:35:58.852188+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250310_003558-3vb938fl/logs/debug-core.log"}
+{"time":"2025-03-10T00:35:58.968099+05:30","level":"INFO","msg":"created new stream","id":"3vb938fl"}
+{"time":"2025-03-10T00:35:58.968186+05:30","level":"INFO","msg":"stream: started","id":"3vb938fl"}
+{"time":"2025-03-10T00:35:58.968381+05:30","level":"INFO","msg":"handler: started","stream_id":"3vb938fl"}
+{"time":"2025-03-10T00:35:58.968448+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"3vb938fl"}
+{"time":"2025-03-10T00:35:58.968663+05:30","level":"INFO","msg":"sender: started","stream_id":"3vb938fl"}
+{"time":"2025-03-10T00:35:59.256678+05:30","level":"INFO","msg":"stream: closing","id":"3vb938fl"}
+{"time":"2025-03-10T00:35:59.405766+05:30","level":"ERROR","msg":"sender: upsertConfig: RunRecord is nil"}
+{"time":"2025-03-10T00:36:00.246647+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-10T00:36:00.246721+05:30","level":"INFO","msg":"handler: closed","stream_id":"3vb938fl"}
+{"time":"2025-03-10T00:36:00.246719+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"3vb938fl"}
+{"time":"2025-03-10T00:36:00.246742+05:30","level":"INFO","msg":"sender: closed","stream_id":"3vb938fl"}
+{"time":"2025-03-10T00:36:00.246908+05:30","level":"INFO","msg":"stream: closed","id":"3vb938fl"}

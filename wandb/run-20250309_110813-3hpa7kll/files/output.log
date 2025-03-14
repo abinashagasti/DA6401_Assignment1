@@ -1,0 +1,2 @@
+<wandb.sdk.wandb_run.Run at 0x171893860>
+[34m[1mwandb[0m: [33mWARNING[0m Calling wandb.login() after wandb.init() has no effect.

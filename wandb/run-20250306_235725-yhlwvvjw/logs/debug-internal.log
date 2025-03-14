@@ -1,0 +1,24 @@
+{"time":"2025-03-06T23:57:25.469828+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_235725-yhlwvvjw/logs/debug-core.log"}
+{"time":"2025-03-06T23:57:25.587067+05:30","level":"INFO","msg":"created new stream","id":"yhlwvvjw"}
+{"time":"2025-03-06T23:57:25.587123+05:30","level":"INFO","msg":"stream: started","id":"yhlwvvjw"}
+{"time":"2025-03-06T23:57:25.587137+05:30","level":"INFO","msg":"handler: started","stream_id":"yhlwvvjw"}
+{"time":"2025-03-06T23:57:25.587173+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"yhlwvvjw"}
+{"time":"2025-03-06T23:57:25.58715+05:30","level":"INFO","msg":"sender: started","stream_id":"yhlwvvjw"}
+{"time":"2025-03-06T23:57:25.944429+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-06T23:58:04.501811+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/yhlwvvjw/file_stream\": dial tcp 35.186.228.49:443: connect: operation timed out"}
+{"time":"2025-03-06T23:58:06.642595+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/yhlwvvjw/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-06T23:58:11.416025+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/yhlwvvjw/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-06T23:58:14.334967+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.42.10.114:64387->35.186.228.49:443: read: can't assign requested address"}
+{"time":"2025-03-06T23:58:16.406486+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-06T23:58:20.561513+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/yhlwvvjw/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-06T23:58:20.90516+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-06T23:58:29.179567+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-07T00:02:45.067879+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-07T00:02:45.068794+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-07T00:02:46.083133+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":0.4398295}],"total_operations":1}}
+{"time":"2025-03-07T00:02:48.09583+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-07T00:02:59.029561+05:30","level":"INFO","msg":"stream: closing","id":"yhlwvvjw"}
+{"time":"2025-03-07T00:02:59.029743+05:30","level":"INFO","msg":"handler: closed","stream_id":"yhlwvvjw"}
+{"time":"2025-03-07T00:02:59.029765+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"yhlwvvjw"}
+{"time":"2025-03-07T00:02:59.029967+05:30","level":"INFO","msg":"sender: closed","stream_id":"yhlwvvjw"}
+{"time":"2025-03-07T00:02:59.029985+05:30","level":"INFO","msg":"stream: closed","id":"yhlwvvjw"}

@@ -1,0 +1,16 @@
+{"time":"2025-03-08T03:50:19.505405+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250308_035019-t53lkokp/logs/debug-core.log"}
+{"time":"2025-03-08T03:50:19.621017+05:30","level":"INFO","msg":"created new stream","id":"t53lkokp"}
+{"time":"2025-03-08T03:50:19.62107+05:30","level":"INFO","msg":"stream: started","id":"t53lkokp"}
+{"time":"2025-03-08T03:50:19.621079+05:30","level":"INFO","msg":"handler: started","stream_id":"t53lkokp"}
+{"time":"2025-03-08T03:50:19.621117+05:30","level":"INFO","msg":"sender: started","stream_id":"t53lkokp"}
+{"time":"2025-03-08T03:50:19.62112+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"t53lkokp"}
+{"time":"2025-03-08T03:50:19.950185+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-08T04:30:44.325855+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-08T04:30:44.328308+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-08T04:30:45.332422+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.387040375,"progress":"2.5KB/2.5KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.386900958,"progress":"257B/257B"},{"desc":"uploading config.yaml","runtime_seconds":0.115675375,"progress":"776B/776B"}],"total_operations":3}}
+{"time":"2025-03-08T04:30:46.350094+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-08T04:30:47.059738+05:30","level":"INFO","msg":"stream: closing","id":"t53lkokp"}
+{"time":"2025-03-08T04:30:47.059815+05:30","level":"INFO","msg":"handler: closed","stream_id":"t53lkokp"}
+{"time":"2025-03-08T04:30:47.059851+05:30","level":"INFO","msg":"sender: closed","stream_id":"t53lkokp"}
+{"time":"2025-03-08T04:30:47.059836+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"t53lkokp"}
+{"time":"2025-03-08T04:30:47.059967+05:30","level":"INFO","msg":"stream: closed","id":"t53lkokp"}

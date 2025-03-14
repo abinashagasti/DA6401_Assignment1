@@ -1,0 +1,21 @@
+{"time":"2025-03-07T12:27:12.471247+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250307_122712-9smdbjhy/logs/debug-core.log"}
+{"time":"2025-03-07T12:27:12.587485+05:30","level":"INFO","msg":"created new stream","id":"9smdbjhy"}
+{"time":"2025-03-07T12:27:12.587524+05:30","level":"INFO","msg":"stream: started","id":"9smdbjhy"}
+{"time":"2025-03-07T12:27:12.587542+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"9smdbjhy"}
+{"time":"2025-03-07T12:27:12.587559+05:30","level":"INFO","msg":"handler: started","stream_id":"9smdbjhy"}
+{"time":"2025-03-07T12:27:12.587625+05:30","level":"INFO","msg":"sender: started","stream_id":"9smdbjhy"}
+{"time":"2025-03-07T12:27:13.75358+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-07T12:34:25.820986+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-07T12:34:25.825821+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-07T12:34:26.83176+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":1.010432209}],"total_operations":1}}
+{"time":"2025-03-07T12:34:29.831541+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/9smdbjhy/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-07T12:34:55.825229+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-03-07T12:35:26.96948+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":61.147784375,"error_status":"retrying: Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}],"total_operations":1}}
+{"time":"2025-03-07T12:35:27.935366+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-03-07T12:36:01.808598+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.227.134:50811->35.186.228.49:443: read: can't assign requested address"}
+{"time":"2025-03-07T12:36:13.780067+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-07T12:36:14.163332+05:30","level":"INFO","msg":"stream: closing","id":"9smdbjhy"}
+{"time":"2025-03-07T12:36:14.16337+05:30","level":"INFO","msg":"handler: closed","stream_id":"9smdbjhy"}
+{"time":"2025-03-07T12:36:14.163402+05:30","level":"INFO","msg":"sender: closed","stream_id":"9smdbjhy"}
+{"time":"2025-03-07T12:36:14.163383+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"9smdbjhy"}
+{"time":"2025-03-07T12:36:14.163654+05:30","level":"INFO","msg":"stream: closed","id":"9smdbjhy"}

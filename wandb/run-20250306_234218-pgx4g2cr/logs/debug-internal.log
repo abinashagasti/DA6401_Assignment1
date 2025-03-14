@@ -1,0 +1,17 @@
+{"time":"2025-03-06T23:42:18.454515+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250306_234218-pgx4g2cr/logs/debug-core.log"}
+{"time":"2025-03-06T23:42:18.57813+05:30","level":"INFO","msg":"created new stream","id":"pgx4g2cr"}
+{"time":"2025-03-06T23:42:18.578182+05:30","level":"INFO","msg":"stream: started","id":"pgx4g2cr"}
+{"time":"2025-03-06T23:42:18.578194+05:30","level":"INFO","msg":"handler: started","stream_id":"pgx4g2cr"}
+{"time":"2025-03-06T23:42:18.578238+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"pgx4g2cr"}
+{"time":"2025-03-06T23:42:18.578244+05:30","level":"INFO","msg":"sender: started","stream_id":"pgx4g2cr"}
+{"time":"2025-03-06T23:42:19.051342+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-06T23:42:50.19851+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/pgx4g2cr/file_stream\": read tcp 10.42.10.114:64180->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-03-06T23:43:53.363067+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-06T23:43:53.363721+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-06T23:43:54.370438+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.408474375,"progress":"2.7KB/2.7KB"},{"desc":"uploading config.yaml","runtime_seconds":0.094519458,"progress":"775B/775B"}],"total_operations":2}}
+{"time":"2025-03-06T23:43:55.320098+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-06T23:43:56.005073+05:30","level":"INFO","msg":"stream: closing","id":"pgx4g2cr"}
+{"time":"2025-03-06T23:43:56.005131+05:30","level":"INFO","msg":"handler: closed","stream_id":"pgx4g2cr"}
+{"time":"2025-03-06T23:43:56.005153+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"pgx4g2cr"}
+{"time":"2025-03-06T23:43:56.005168+05:30","level":"INFO","msg":"sender: closed","stream_id":"pgx4g2cr"}
+{"time":"2025-03-06T23:43:56.005876+05:30","level":"INFO","msg":"stream: closed","id":"pgx4g2cr"}

@@ -1,0 +1,23 @@
+Training Progress: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 15/15 [08:25<00:00, 33.70s/it]
+Epoch 1/15 - Training Loss: 2.0814, Training Accuracy: 53.42%, Validation Loss: 1.3583, Validation Accuracy:  65.1667%
+Storing current model parameters (epoch 1) ...
+Epoch 2/15 - Training Loss: 1.7998, Training Accuracy: 57.0111%, Validation Loss: 2.2422, Validation Accuracy:  56.7833%
+Epoch 3/15 - Training Loss: 1.5146, Training Accuracy: 55.34%, Validation Loss: 1.2025, Validation Accuracy:  55.2833%
+Storing current model parameters (epoch 3) ...
+Epoch 4/15 - Training Loss: 1.6844, Training Accuracy: 47.3537%, Validation Loss: 1.5194, Validation Accuracy:  33.4333%
+Epoch 5/15 - Training Loss: 1.6609, Training Accuracy: 42.1222%, Validation Loss: 1.7043, Validation Accuracy:  39.9167%
+Epoch 6/15 - Training Loss: 1.7033, Training Accuracy: 44.2685%, Validation Loss: 1.3575, Validation Accuracy:  48.1333%
+Reloading best model and reducing learning rate by half ...
+Epoch 7/15 - Training Loss: 1.1840, Training Accuracy: 61.64%, Validation Loss: 1.0257, Validation Accuracy:  67.6500%
+Storing current model parameters (epoch 7) ...
+Epoch 8/15 - Training Loss: 1.1748, Training Accuracy: 63.53%, Validation Loss: 0.9918, Validation Accuracy:  68.0500%
+Storing current model parameters (epoch 8) ...
+Epoch 9/15 - Training Loss: 1.2030, Training Accuracy: 63.5704%, Validation Loss: 1.3228, Validation Accuracy:  53.7167%
+Epoch 10/15 - Training Loss: 1.1835, Training Accuracy: 64.0907%, Validation Loss: 1.0209, Validation Accuracy:  65.1833%
+Epoch 11/15 - Training Loss: 1.2137, Training Accuracy: 63.8426%, Validation Loss: 1.1904, Validation Accuracy:  60.6333%
+Reloading best model and reducing learning rate by half ...
+Epoch 12/15 - Training Loss: 0.9939, Training Accuracy: 69.0444%, Validation Loss: 0.9930, Validation Accuracy:  70.0000%
+Epoch 13/15 - Training Loss: 0.9869, Training Accuracy: 69.48%, Validation Loss: 0.9272, Validation Accuracy:  70.5000%
+Storing current model parameters (epoch 13) ...
+Epoch 14/15 - Training Loss: 0.9654, Training Accuracy: 70.0630%, Validation Loss: 0.9423, Validation Accuracy:  70.6833%
+Epoch 15/15 - Training Loss: 0.9640, Training Accuracy: 70.5185%, Validation Loss: 1.0292, Validation Accuracy:  67.5167%

@@ -1,0 +1,16 @@
+{"time":"2025-03-10T01:04:21.87193+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250310_010421-asw5763r/logs/debug-core.log"}
+{"time":"2025-03-10T01:04:21.98547+05:30","level":"INFO","msg":"created new stream","id":"asw5763r"}
+{"time":"2025-03-10T01:04:21.985633+05:30","level":"INFO","msg":"stream: started","id":"asw5763r"}
+{"time":"2025-03-10T01:04:21.985844+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"asw5763r"}
+{"time":"2025-03-10T01:04:21.985861+05:30","level":"INFO","msg":"handler: started","stream_id":"asw5763r"}
+{"time":"2025-03-10T01:04:21.985987+05:30","level":"INFO","msg":"sender: started","stream_id":"asw5763r"}
+{"time":"2025-03-10T01:04:22.34098+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-10T01:11:32.332067+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-10T01:11:32.333677+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-10T01:11:33.364049+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.312595625,"progress":"3.2KB/3.2KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.312541458,"progress":"256B/256B"},{"desc":"uploading config.yaml","runtime_seconds":0.017174958,"progress":"582B/582B"}],"total_operations":3}}
+{"time":"2025-03-10T01:11:34.525026+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-10T01:11:35.24211+05:30","level":"INFO","msg":"stream: closing","id":"asw5763r"}
+{"time":"2025-03-10T01:11:35.242192+05:30","level":"INFO","msg":"sender: closed","stream_id":"asw5763r"}
+{"time":"2025-03-10T01:11:35.242179+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"asw5763r"}
+{"time":"2025-03-10T01:11:35.242403+05:30","level":"INFO","msg":"handler: closed","stream_id":"asw5763r"}
+{"time":"2025-03-10T01:11:35.242438+05:30","level":"INFO","msg":"stream: closed","id":"asw5763r"}

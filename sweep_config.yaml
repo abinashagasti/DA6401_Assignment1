@@ -8,11 +8,11 @@ parameters:
     min: 0.0001
     max: 0.01
   optimizer:
-    values: ['rmsprop', 'adam', 'nadam']
+    values: ['sgd', 'momentum', 'nag', 'rmsprop', 'adam', 'nadam']
   activation:
     values: ['tanh', 'sigmoid', 'relu']
   epochs:
-    values: [15,]
+    values: [15,20,30]
   batch_size:
     values: [32,64,128]
   num_layers: 

@@ -1,0 +1,15 @@
+{"time":"2025-03-09T22:56:14.727816+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250309_225614-mev3dlow/logs/debug-core.log"}
+{"time":"2025-03-09T22:56:14.840189+05:30","level":"INFO","msg":"created new stream","id":"mev3dlow"}
+{"time":"2025-03-09T22:56:14.840433+05:30","level":"INFO","msg":"stream: started","id":"mev3dlow"}
+{"time":"2025-03-09T22:56:14.840599+05:30","level":"INFO","msg":"handler: started","stream_id":"mev3dlow"}
+{"time":"2025-03-09T22:56:14.840667+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"mev3dlow"}
+{"time":"2025-03-09T22:56:14.840784+05:30","level":"INFO","msg":"sender: started","stream_id":"mev3dlow"}
+{"time":"2025-03-09T22:56:15.303654+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-09T23:05:57.849966+05:30","level":"INFO","msg":"stream: closing","id":"mev3dlow"}
+{"time":"2025-03-09T23:05:57.850221+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-09T23:05:57.851039+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-09T23:05:59.882974+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-09T23:06:00.242753+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"mev3dlow"}
+{"time":"2025-03-09T23:06:00.242888+05:30","level":"INFO","msg":"sender: closed","stream_id":"mev3dlow"}
+{"time":"2025-03-09T23:06:00.243176+05:30","level":"INFO","msg":"handler: closed","stream_id":"mev3dlow"}
+{"time":"2025-03-09T23:06:00.243206+05:30","level":"INFO","msg":"stream: closed","id":"mev3dlow"}

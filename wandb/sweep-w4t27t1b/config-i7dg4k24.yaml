@@ -1,0 +1,20 @@
+wandb_version: 1
+
+activation:
+  value: sigmoid
+batch_size:
+  value: 32
+epochs:
+  value: 15
+eta:
+  value: 0.0005582463172240319
+hidden_size:
+  value: 128
+num_layers:
+  value: 3
+optimizer:
+  value: nag
+weight_decay:
+  value: 0.0005
+weight_init:
+  value: he

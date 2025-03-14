@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/log_sample_images.py", line 12, in <module>
+    plot_sample_images(x_train, y_train)
+TypeError: plot_sample_images() missing 1 required positional argument: 'wandb_run'

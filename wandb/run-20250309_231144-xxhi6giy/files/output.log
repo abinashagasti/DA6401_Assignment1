@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/log_sample_images.py", line 33, in <module>
+    create_confusion_matrix(y_test, y_preds, wandb_run=wandb)
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/utils.py", line 46, in create_confusion_matrix
+    sns.heatmap(conf_matrix, annot=True, fmt="d", cmap="Blues")
+                ^^^^^^^^^^^
+NameError: name 'conf_matrix' is not defined

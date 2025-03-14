@@ -1,0 +1,19 @@
+{"time":"2025-03-08T03:07:38.435957+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250308_030738-gfjwtd7s/logs/debug-core.log"}
+{"time":"2025-03-08T03:07:38.550811+05:30","level":"INFO","msg":"created new stream","id":"gfjwtd7s"}
+{"time":"2025-03-08T03:07:38.55087+05:30","level":"INFO","msg":"stream: started","id":"gfjwtd7s"}
+{"time":"2025-03-08T03:07:38.550898+05:30","level":"INFO","msg":"sender: started","stream_id":"gfjwtd7s"}
+{"time":"2025-03-08T03:07:38.550919+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"gfjwtd7s"}
+{"time":"2025-03-08T03:07:38.550913+05:30","level":"INFO","msg":"handler: started","stream_id":"gfjwtd7s"}
+{"time":"2025-03-08T03:07:38.864821+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-08T03:14:39.758054+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/gfjwtd7s/file_stream\": read tcp 10.22.51.239:57865->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-03-08T03:17:54.745696+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/gfjwtd7s/file_stream\": read tcp 10.22.51.239:57911->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-03-08T03:19:09.744105+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/gfjwtd7s/file_stream\": read tcp 10.22.51.239:57928->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-03-08T03:21:09.55706+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-08T03:21:09.558714+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-08T03:21:10.566937+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.345745875,"progress":"1.1KB/1.1KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.345723917,"progress":"252B/252B"},{"desc":"uploading config.yaml","runtime_seconds":0.047264458,"progress":"778B/778B"}],"total_operations":3}}
+{"time":"2025-03-08T03:21:11.631539+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-08T03:21:11.958249+05:30","level":"INFO","msg":"stream: closing","id":"gfjwtd7s"}
+{"time":"2025-03-08T03:21:11.958288+05:30","level":"INFO","msg":"handler: closed","stream_id":"gfjwtd7s"}
+{"time":"2025-03-08T03:21:11.958308+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"gfjwtd7s"}
+{"time":"2025-03-08T03:21:11.95855+05:30","level":"INFO","msg":"sender: closed","stream_id":"gfjwtd7s"}
+{"time":"2025-03-08T03:21:11.958624+05:30","level":"INFO","msg":"stream: closed","id":"gfjwtd7s"}
