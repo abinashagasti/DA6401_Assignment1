@@ -1,0 +1,6 @@
+Training Progress: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:56<00:00, 28.24s/it]
+Epoch 1/2 - Training Loss: 0.5649, Training Accuracy: 79.37%, Validation Loss: 0.4397, Validation Accuracy:  84.5333%
+Storing current model parameters (epoch 1) ...
+Epoch 2/2 - Training Loss: 0.3990, Training Accuracy: 85.26%, Validation Loss: 0.3998, Validation Accuracy:  85.4667%
+Storing current model parameters (epoch 2) ...
+Test accuracy: 84.3900%

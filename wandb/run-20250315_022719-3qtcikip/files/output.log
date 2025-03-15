@@ -1,0 +1,12 @@
+Training Progress:   0%|                                                                                                  | 0/30 [00:09<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/main.py", line 62, in <module>
+    main(args)
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/main.py", line 31, in main
+    nn.gradient_descent(x_train, y_train, batch_size=args.batch_size, max_epochs=args.epochs, optimizer=args.optimizer, weight_decay=args.weight_decay,\
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/neural_network_class.py", line 206, in gradient_descent
+    self.forward_propagation(input)
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/neural_network_class.py", line 80, in forward_propagation
+    self.a[f"a{i+1}"] = np.matmul(self.weights[f"W{i+1}"], self.h[f"h{i}"]) + self.biases[f"b{i+1}"]
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

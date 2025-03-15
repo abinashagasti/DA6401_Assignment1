@@ -1,0 +1,16 @@
+{"time":"2025-03-15T14:18:53.924795+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250315_141853-3tyo4t87/logs/debug-core.log"}
+{"time":"2025-03-15T14:18:54.037221+05:30","level":"INFO","msg":"created new stream","id":"3tyo4t87"}
+{"time":"2025-03-15T14:18:54.037411+05:30","level":"INFO","msg":"stream: started","id":"3tyo4t87"}
+{"time":"2025-03-15T14:18:54.037594+05:30","level":"INFO","msg":"handler: started","stream_id":"3tyo4t87"}
+{"time":"2025-03-15T14:18:54.037775+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"3tyo4t87"}
+{"time":"2025-03-15T14:18:54.037982+05:30","level":"INFO","msg":"sender: started","stream_id":"3tyo4t87"}
+{"time":"2025-03-15T14:18:54.425436+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-15T14:18:56.431434+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-15T14:18:56.432203+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-15T14:18:57.441636+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-3tyo4t87-Confusion_matrix_fashion_mnist_table","runtime_seconds":1.549541083,"subtasks":[{"desc":"Confusion_matrix_fashion_mnist_table.table.json","runtime_seconds":0.110651583,"progress":"3.3KB/3.3KB"}]},{"desc":"uploading config.yaml","runtime_seconds":0.111514791,"progress":"1.9KB/1.9KB"}],"total_operations":2}}
+{"time":"2025-03-15T14:18:58.981717+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-15T14:18:59.51049+05:30","level":"INFO","msg":"stream: closing","id":"3tyo4t87"}
+{"time":"2025-03-15T14:18:59.510547+05:30","level":"INFO","msg":"handler: closed","stream_id":"3tyo4t87"}
+{"time":"2025-03-15T14:18:59.510564+05:30","level":"INFO","msg":"sender: closed","stream_id":"3tyo4t87"}
+{"time":"2025-03-15T14:18:59.510557+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"3tyo4t87"}
+{"time":"2025-03-15T14:18:59.511314+05:30","level":"INFO","msg":"stream: closed","id":"3tyo4t87"}

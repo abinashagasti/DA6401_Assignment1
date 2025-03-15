@@ -1,0 +1,17 @@
+{"time":"2025-03-15T02:28:39.042958+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/wandb/run-20250315_022838-qbiqu7nh/logs/debug-core.log"}
+{"time":"2025-03-15T02:28:39.155064+05:30","level":"INFO","msg":"created new stream","id":"qbiqu7nh"}
+{"time":"2025-03-15T02:28:39.155135+05:30","level":"INFO","msg":"stream: started","id":"qbiqu7nh"}
+{"time":"2025-03-15T02:28:39.155359+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"qbiqu7nh"}
+{"time":"2025-03-15T02:28:39.155417+05:30","level":"INFO","msg":"handler: started","stream_id":"qbiqu7nh"}
+{"time":"2025-03-15T02:28:39.155606+05:30","level":"INFO","msg":"sender: started","stream_id":"qbiqu7nh"}
+{"time":"2025-03-15T02:28:39.615508+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-15T02:33:55.485162+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/qbiqu7nh/file_stream\": read tcp 10.22.50.33:50882->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-03-15T02:43:40.398327+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-15T02:43:40.413976+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-15T02:43:41.40472+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.397180084,"progress":"5.1KB/5.1KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.397156334,"progress":"487B/487B"},{"desc":"uploading config.yaml","runtime_seconds":0.114385792,"progress":"603B/603B"}],"total_operations":3}}
+{"time":"2025-03-15T02:43:42.476382+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-15T02:43:42.892408+05:30","level":"INFO","msg":"stream: closing","id":"qbiqu7nh"}
+{"time":"2025-03-15T02:43:42.89245+05:30","level":"INFO","msg":"sender: closed","stream_id":"qbiqu7nh"}
+{"time":"2025-03-15T02:43:42.892444+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"qbiqu7nh"}
+{"time":"2025-03-15T02:43:42.892577+05:30","level":"INFO","msg":"handler: closed","stream_id":"qbiqu7nh"}
+{"time":"2025-03-15T02:43:42.892589+05:30","level":"INFO","msg":"stream: closed","id":"qbiqu7nh"}

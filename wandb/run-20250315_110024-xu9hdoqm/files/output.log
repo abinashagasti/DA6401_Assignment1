@@ -1,0 +1,29 @@
+Training Progress:  33%|█████████████████████████████▋                                                           | 10/30 [05:40<11:20, 34.00s/it]
+Epoch 1/30 - Training Loss: 0.2923, Training Accuracy: 78.77%, Validation Loss: 0.4030, Validation Accuracy:  85.1833%
+Storing current model parameters (epoch 1) ...
+Epoch 2/30 - Training Loss: 0.2090, Training Accuracy: 85.11%, Validation Loss: 0.3719, Validation Accuracy:  86.8667%
+Storing current model parameters (epoch 2) ...
+Epoch 3/30 - Training Loss: 0.1895, Training Accuracy: 86.71%, Validation Loss: 0.3695, Validation Accuracy:  86.3167%
+Storing current model parameters (epoch 3) ...
+Epoch 4/30 - Training Loss: 0.1769, Training Accuracy: 87.44%, Validation Loss: 0.3360, Validation Accuracy:  87.9167%
+Storing current model parameters (epoch 4) ...
+Epoch 5/30 - Training Loss: 0.1681, Training Accuracy: 88.1463%, Validation Loss: 0.3425, Validation Accuracy:  87.2167%
+Epoch 6/30 - Training Loss: 0.1614, Training Accuracy: 88.62%, Validation Loss: 0.3224, Validation Accuracy:  88.5000%
+Storing current model parameters (epoch 6) ...
+Epoch 7/30 - Training Loss: 0.1536, Training Accuracy: 89.1463%, Validation Loss: 0.3404, Validation Accuracy:  88.2000%
+Epoch 8/30 - Training Loss: 0.1509, Training Accuracy: 89.3981%, Validation Loss: 0.3340, Validation Accuracy:  87.8500%
+Epoch 9/30 - Training Loss: 0.1442, Training Accuracy: 89.8204%, Validation Loss: 0.3281, Validation Accuracy:  88.7833%
+Reloading best model and reducing learning rate by half ...
+Epoch 10/30 - Training Loss: 0.1384, Training Accuracy: 90.21%, Validation Loss: 0.2906, Validation Accuracy:  89.5000%
+Storing current model parameters (epoch 10) ...
+Traceback (most recent call last):
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/main.py", line 66, in <module>
+    main(args)
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/main.py", line 34, in main
+    nn.gradient_descent(x_train, y_train, batch_size=args.batch_size, max_epochs=args.epochs, optimizer=args.optimizer, weight_decay=args.weight_decay,\
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/neural_network_class.py", line 210, in gradient_descent
+    self.forward_propagation(input)
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/neural_network_class.py", line 84, in forward_propagation
+    self.a[f"a{i+1}"] = np.matmul(self.weights[f"W{i+1}"], self.h[f"h{i}"]) + self.biases[f"b{i+1}"]
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -4,8 +4,41 @@ from neural_network_class import neural_network
 import wandb
 import seaborn as sns
 from sklearn.metrics import confusion_matrix
+from sklearn.calibration import calibration_curve
+from keras.datasets import fashion_mnist, mnist
+
+def data_download(dataset):
+    """
+    Downloads data and return test and trains data samples
+
+    Parameters:
+    ----------
+        dataset (str): Dataset name. fashion_mnist or mnist.
+
+    Returns:
+    -------
+        numpy.ndarray : Train features
+        numpy.ndarray : Train Labels
+        numpy.ndarray : Test features
+        numpy.ndarray : Test Labels
+    """
+
+    if dataset == "fashion_mnist":
+        (X_train, Y_train), (X_test, Y_test) = fashion_mnist.load_data()
+    elif dataset == "mnist":
+        (X_train, Y_train), (X_test, Y_test) = mnist.load_data()
+    return X_train, Y_train, X_test, Y_test
 
 def plot_sample_images(x, y, wandb_run=None):
+    """"
+    Plot sample images from each class.
+
+    Parameters:
+    -----------
+        x: Input data
+        y: Output data
+        wandb_run: Optional input to log on wandb api
+    """
     indices = [np.random.choice(np.where(y == c)[0]) for c in range(10)]
     fig, axes = plt.subplots(2, 5, figsize=(10, 5)) 
     axes = axes.ravel()
@@ -28,6 +61,7 @@ def create_confusion_matrix(y_actual, y_pred, wandb_run=None):
     ----------
         y_actual (numpy.ndarray): Actual output
         y_pred (numpy.ndarray): predicted output
+        wandb_run: optional argument containing wandb to log data
 
     Returns:
     -------
@@ -40,10 +74,11 @@ def create_confusion_matrix(y_actual, y_pred, wandb_run=None):
 
     all_labels = ['T-shirt/top','Trouser','Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
 
-    conf_matrix = confusion_matrix(y_actual, y_pred)
+    # conf_matrix = confusion_matrix(y_actual, y_pred)
 
     if wandb_run is not None:
-        # wandb.log({"Confusion_matrix_fashion_mnist" : wandb.plot.confusion_matrix(preds=y_pred, y_true=y_actual,class_names=all_labels)})
+        # Log confusion matrix data
+        wandb.log({"Confusion_matrix_fashion_mnist" : wandb.plot.confusion_matrix(preds=y_pred, y_true=y_actual,class_names=all_labels)})
 
         # plt.figure(figsize=(8, 6))
         # sns.heatmap(conf_matrix, annot=True, fmt="d", cmap="Blues")
@@ -54,41 +89,90 @@ def create_confusion_matrix(y_actual, y_pred, wandb_run=None):
         # # Log Confusion Matrix as an Image
         # wandb.log({"confusion_matrix": wandb.Image(plt)})
 
-        table = wandb.Table(columns=["Actual", "Predicted", "Count"])
-        for i in range(len(all_labels)):  # Loop through actual classes
-            for j in range(len(all_labels)):  # Loop through predicted classes
-                table.add_data(all_labels[i], all_labels[j], conf_matrix[i, j])
+        # table = wandb.Table(columns=["Actual", "Predicted", "Count"])
+        # for i in range(len(all_labels)):  # Loop through actual classes
+        #     for j in range(len(all_labels)):  # Loop through predicted classes
+        #         table.add_data(all_labels[i], all_labels[j], conf_matrix[i, j])
 
-        # Log table to WandB
-        wandb.log({"Confusion Matrix Table": table})
-        wandb.finish()
+        # # Log table to WandB
+        # wandb.log({"Confusion Matrix Table": table})
 
 def return_predicted_output(nn, x_test, y_test):
+    """
+    Return predicted output and probabilities. 
+
+    Args:
+        nn: neural network object
+        x_test: test image samples
+        y_test: test output labels
+
+    Outputs:
+        y_preds: Class predictions for each input test sample 
+        accurate_preds: # Correct predictions in test set
+        y_probs: Predicted probabilities of outputs 
+    """
     y_preds = np.zeros(y_test.shape[0])
+    y_probs = np.zeros((y_test.shape[0],10))
     accurate_preds = 0
     for i in range(x_test.shape[0]):
         nn.forward_propagation(x_test[i].reshape(-1, 1) / 255.0)  # Forward pass
-        y_preds[i] = np.argmax(nn.h[f"h{nn.num_layers+1}"])  # Get predicted class
+        y_probs[i] = nn.h[f"h{nn.num_layers+1}"].flatten()
+        y_preds[i] = np.argmax(y_probs[i])
         if y_preds[i]==y_test[i]:
             accurate_preds += 1
 
-    return y_preds, accurate_preds
+    return y_preds, accurate_preds, y_probs
 
-def log_hard_samples(y_true, y_pred_prob, x_samples):
-    """Logs hardest misclassified samples with their confidence levels."""
-    confidence = np.max(y_pred_prob, axis=1)  # Take max probability per sample
-    misclassified = (y_true != np.argmax(y_pred_prob, axis=1))  # Identify errors
+def find_hard_samples(y_true, y_probs, top_k=10):
+    """
+    Identify the hardest samples where the model is most confident but wrong.
 
-    # Select 10 hardest misclassified samples (lowest confidence)
-    hardest_indices = np.argsort(confidence[misclassified])[:10]
-    
-    # table = wandb.Table(columns=["Image", "True Label", "Predicted Label", "Confidence"])
-    # for idx in hardest_indices:
-    #     table.add_data(wandb.Image(x_samples[idx]), y_true[idx], np.argmax(y_pred_prob[idx]), confidence[idx])
+    Args:
+        y_true (array-like): True class labels (shape: [num_samples]).
+        y_probs (array-like): Predicted probabilities (shape: [num_samples, num_classes]).
+        x_samples (array-like): Input samples (e.g., images) corresponding to y_true.
+        top_k (int): Number of hardest samples to return.
 
-    # wandb.log({f"Hard Samples - {model_name}": table})
+    Returns:
+        List of (index, true_label, predicted_label, confidence) for hardest samples.
+    """
+    y_pred = np.argmax(y_probs, axis=1)  # Get predicted class
+    confidences = np.max(y_probs, axis=1)  # Get confidence of prediction
+
+    incorrect_mask = (y_pred != y_true)  # Find misclassified samples
+    incorrect_confidences = confidences[incorrect_mask]  # Get confidence for wrong predictions
+    incorrect_indices = np.where(incorrect_mask)[0]  # Get indices of misclassified samples
+
+    # Sort by highest confidence in wrong prediction
+    sorted_indices = incorrect_indices[np.argsort(-incorrect_confidences)][:top_k]
+
+    hard_samples = [(idx, y_true[idx], y_pred[idx], confidences[idx]) for idx in sorted_indices]
+
+    return hard_samples
+
+def plot_hard_samples(hard_samples, x_samples):
+    """
+    Plot the hardest misclassified samples.
+
+    Args:
+        hard_samples (list): List of (index, true_label, predicted_label, confidence).
+        x_samples (array-like): Input samples (e.g., images).
+
+    Returns:
+        None (displays a plot)
+    """
+    fig, axes = plt.subplots(1, len(hard_samples), figsize=(15, 5))
+
+    for i, (idx, true_label, pred_label, conf) in enumerate(hard_samples):
+        axes[i].imshow(x_samples[idx], cmap="gray")
+        axes[i].set_title(f"T: {true_label}, P: {pred_label}\nConf: {conf:.2f}")
+        axes[i].axis("off")
+
+    plt.tight_layout()
+    plt.show()
 
 def check_forward_prop(nn, x, y):
+    # Check correctness of forward propagation algorithm manually for a 3 hidden layer neural network. 
     y_check = nn.output(nn.weights["W4"]@nn.activation(nn.weights["W3"]@nn.activation(nn.weights["W2"]@nn.activation(nn.weights["W1"]@x \
                                                                                                                  +nn.biases["b1"])+nn.biases["b2"])+nn.biases["b3"])+nn.biases["b4"])
     if np.all(y==y_check):
@@ -97,6 +181,7 @@ def check_forward_prop(nn, x, y):
         print("Mistake in forward propagation!")
 
 def check_backward_prop(nn, y_class, y):
+    # Check correctness of backward propagation algorihtm manually for a 3 hidden layer neural network. 
     a4 = np.all(nn.gradients["a4"]==y-nn.one_hot_vector(y_class))
     W4 = np.all(nn.gradients["W4"]==nn.gradients["a4"]@np.transpose(nn.h["h3"]))
     b4 = np.all(nn.gradients["b4"]==nn.gradients["a4"])

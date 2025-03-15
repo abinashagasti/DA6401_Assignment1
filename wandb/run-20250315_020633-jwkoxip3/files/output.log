@@ -1,0 +1,24 @@
+Training Progress:  23%|█████████████████████                                                                     | 7/30 [03:40<12:04, 31.52s/it]
+Epoch 1/30 - Training Loss: 0.5604, Training Accuracy: 79.58%, Validation Loss: 0.4096, Validation Accuracy:  85.3000%
+Storing current model parameters (epoch 1) ...
+Epoch 2/30 - Training Loss: 0.3978, Training Accuracy: 85.3%, Validation Loss: 0.3648, Validation Accuracy:  86.4667%
+Storing current model parameters (epoch 2) ...
+Epoch 3/30 - Training Loss: 0.3585, Training Accuracy: 86.72%, Validation Loss: 0.3487, Validation Accuracy:  87.0500%
+Storing current model parameters (epoch 3) ...
+Epoch 4/30 - Training Loss: 0.3318, Training Accuracy: 87.5574%, Validation Loss: 0.3524, Validation Accuracy:  87.1833%
+Epoch 5/30 - Training Loss: 0.3128, Training Accuracy: 88.3%, Validation Loss: 0.3429, Validation Accuracy:  87.1000%
+Storing current model parameters (epoch 5) ...
+Epoch 6/30 - Training Loss: 0.2973, Training Accuracy: 88.7537%, Validation Loss: 0.3459, Validation Accuracy:  87.5000%
+Epoch 7/30 - Training Loss: 0.2855, Training Accuracy: 89.3%, Validation Loss: 0.3239, Validation Accuracy:  88.6167%
+Storing current model parameters (epoch 7) ...
+Traceback (most recent call last):
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/main.py", line 62, in <module>
+    main(args)
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/main.py", line 31, in main
+    nn.gradient_descent(x_train, y_train, batch_size=args.batch_size, max_epochs=args.epochs, optimizer=args.optimizer, weight_decay=args.weight_decay,\
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/neural_network_class.py", line 206, in gradient_descent
+    self.forward_propagation(input)
+  File "/Users/abinashagasti/IITM/Academics/Deep Learning/DA6401_Assignment1/neural_network_class.py", line 80, in forward_propagation
+    self.a[f"a{i+1}"] = np.matmul(self.weights[f"W{i+1}"], self.h[f"h{i}"]) + self.biases[f"b{i+1}"]
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
