@@ -30,20 +30,17 @@ The repository includes several YAML configuration files for hyperparameter swee
 
 These files define different sets of hyperparameters that were explored for **Question 4** of the assignment to optimize model performance.
 
-## Running the Code
-To train the model with default settings:
-```sh
-python main.py
-```
-
 ## Logging and Monitoring
 - **Confusion Matrix Logging**: Execute `train.py` to generate and log confusion matrices for evaluating model predictions.
 - **Hyperparameter Tuning**: Use `sweep_train.py` along with the provided sweep configuration files to explore different model settings.
+
+## Wandb Report
+The assignment report prepared on the wandb platform can be found: https://wandb.ai/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/reports/DA-6401-Assignment-1--VmlldzoxMTY4ODcwMA?accessToken=k8wh6e8bls5jz4p52w4t6rdzgsmby7ry6n18pd2qxeid893p3z2lazq6ok1ojru8. 
 
 ## Additional Information
 For further details on how to modify hyperparameters or customize training, refer to the **code comments** inside the scripts.
 
 ---
 
-This repository provides all necessary scripts and configurations to complete **Assignment 1** efficiently. Happy coding! 🎯
+This repository provides all necessary scripts and configurations to complete **Assignment 1** efficiently. Happy coding!
 
