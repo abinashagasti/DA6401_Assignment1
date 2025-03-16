@@ -5,17 +5,17 @@ This repository contains the code files for **Assignment 1** of the course **DA6
 ## Contents
 
 ### **Core Scripts**
-- **`main.py`**: The primary training script, which implements the neural network training based on the assignment's specifications. Run it using:
+- **`train.py`**: The primary training script, which implements the neural network training based on the assignment's specifications. Run it using:
   ```sh
-  python main.py [optional arguments]
+  python train.py [optional arguments]
   ```
   or
   ```sh
-  python3 main.py [optional arguments]
+  python3 train.py [optional arguments]
   ```
   where `[optional arguments]` are the command-line specifications for customizing training.
 
-- **`train.py`**: Used for logging the **confusion matrix**, which helps in evaluating the model's classification performance.
+- **`main.py`**: Used for logging the **confusion matrix**, which helps in evaluating the model's classification performance.
 
 - **`sweep_train.py`**: Designed to perform **sweep training**, which explores different hyperparameter configurations to find the best set of values.
 
@@ -31,7 +31,7 @@ The repository includes several YAML configuration files for hyperparameter swee
 These files define different sets of hyperparameters that were explored for **Question 4** of the assignment to optimize model performance.
 
 ## Logging and Monitoring
-- **Confusion Matrix Logging**: Execute `train.py` to generate and log confusion matrices for evaluating model predictions.
+- **Confusion Matrix Logging**: Execute `main.py` to generate and log confusion matrices for evaluating model predictions.
 - **Hyperparameter Tuning**: Use `sweep_train.py` along with the provided sweep configuration files to explore different model settings.
 
 ## Wandb Report
