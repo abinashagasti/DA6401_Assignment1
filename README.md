@@ -42,40 +42,40 @@ These files define different sets of hyperparameters that were explored for **Qu
 For further details on how to modify hyperparameters or customize training, refer to the **code comments** inside the scripts.
 
 "best_weights_config1_ce.npy" and "best_biases_config1_ce.npy" stores the best weights and biases obtained using the hyperparameter configuration:
-epochs: 30
-batch_size: 32
-loss: "cross_entropy"
-optimizer: "momentum"
-learning_rate: 0.0025
-momentum: 0.9
-beta: 0.9
-beta1: 0.9
-beta2: 0.999
-epsilon: 1e-9
-weight_decay: 0.0005
-weight_init: "Xavier"
-num_layers: 3
-hidden_size: 128
-activation: "ReLu"
+epochs: 30;
+batch_size: 32;
+loss: "cross_entropy";
+optimizer: "momentum";
+learning_rate: 0.0025;
+momentum: 0.9;
+beta: 0.9;
+beta1: 0.9;
+beta2: 0.999;
+epsilon: 1e-9;
+weight_decay: 0.0005;
+weight_init: "Xavier";
+num_layers: 3;
+hidden_size: 128;
+activation: "ReLu";
 
 The above happens to be the best model out of all the sweeps performed on wandb. 
 
 "best_weights_config2_ce.npy" and "best_biases_config2_ce.npy" stores the best weights and biases obtained using the hyperparameter configuration:
-epochs: 30
-batch_size: 128
-loss: "cross_entropy"
-optimizer: "adam"
-learning_rate: 1e-4
-momentum: 0.9
-beta: 0.9
-beta1: 0.9
-beta2: 0.999
-epsilon: 1e-9
-weight_decay: 0.0005
-weight_init: "Xavier"
-num_layers: 3
-hidden_size: 128
-activation: "ReLu"
+epochs: 30;
+batch_size: 128;
+loss: "cross_entropy";
+optimizer: "adam";
+learning_rate: 1e-4;
+momentum: 0.9;
+beta: 0.9;
+beta1: 0.9;
+beta2: 0.999;
+epsilon: 1e-9;
+weight_decay: 0.0005;
+weight_init: "Xavier";
+num_layers: 3;
+hidden_size: 128;
+activation: "ReLu";
 
 Another set of parameters is stored using the "squared_error" loss function. The names have been appropriately modified to contain "xx...xx_se.npy" instead of "xx...xx_ce.npy". 
 
