@@ -4,6 +4,8 @@ This repository contains the code files for **Assignment 1** of the course **DA6
 
 **GitHub Link**: https://github.com/abinashagasti/DA6401_Assignment1
 
+**Wandb Report**: https://wandb.ai/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/reports/DA-6401-Assignment-1--VmlldzoxMTY4ODcwMA?accessToken=k8wh6e8bls5jz4p52w4t6rdzgsmby7ry6n18pd2qxeid893p3z2lazq6ok1ojru8
+
 ## Contents
 
 ### **Core Scripts**
@@ -35,9 +37,6 @@ These files define different sets of hyperparameters that were explored for **Qu
 ## Logging and Monitoring
 - **Confusion Matrix Logging**: Execute `main.py` to generate and log confusion matrices for evaluating model predictions.
 - **Hyperparameter Tuning**: Use `sweep_train.py` along with the provided sweep configuration files to explore different model settings.
-
-## Wandb Report
-The assignment report prepared on the wandb platform can be found: https://wandb.ai/ee20d201-indian-institute-of-technology-madras/DA6401_Assignment_1/reports/DA-6401-Assignment-1--VmlldzoxMTY4ODcwMA?accessToken=k8wh6e8bls5jz4p52w4t6rdzgsmby7ry6n18pd2qxeid893p3z2lazq6ok1ojru8. 
 
 ## Additional Information
 For further details on how to modify hyperparameters or customize training, refer to the **code comments** inside the scripts.
@@ -79,5 +78,6 @@ hidden_size: 128
 activation: "ReLu"
 
 Another set of parameters is stored using the "squared_error" loss function. The names have been appropriately modified to contain "xx...xx_se.npy" instead of "xx...xx_ce.npy". 
+
 ---
 
