@@ -686,6 +686,7 @@ class neural_network:
                 best_weights = self.weights
                 best_biases = self.biases
                 print(f"Storing current model parameters (epoch {epoch}) ...")
+                # Store weights and biases if they provide the best validation loss upto this point. 
                 np.save("best_weights.npy", best_weights)
                 np.save("best_biases.npy", best_biases)
 
